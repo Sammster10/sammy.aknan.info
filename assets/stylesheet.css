@@ -2,14 +2,14 @@
 
 :root {
     font-family: 'Roboto Mono', monospace;
-
-    font-size: 24px;
+    font-size: max(5px, 1.25vw);
 }
 
 
 body {
     margin: 0;
     padding: 0;
+    background-color: #f5ffff;
 }
 
 .row {
@@ -538,10 +538,16 @@ body {
     }
 }
 
-/*.fade-in {*/
-/*    opacity: 0;*/
-/*    transition: opacity 0.2s ease-in;*/
-/*}*/
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.2s ease-in;
+}
+
+.fade-in-on-screen {
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+
 .show {
     opacity: 1;
 }

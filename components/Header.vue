@@ -78,6 +78,8 @@ function updateActiveLink(path: string) {
     activeLink = "about-link";
   } else if (path.startsWith("/services")) {
     activeLink = "services-link";
+  } else if (path.startsWith("/contact")) {
+    activeLink = "contact-link";
   } else if (path.startsWith("/portfolio")) {
     activeLink = "portfolio-link";
   }
@@ -85,8 +87,6 @@ function updateActiveLink(path: string) {
   document.getElementById(activeLink)?.classList.add("active");
 
   oldActiveLink = activeLink;
-
-  console.log("active link: " + activeLink);
 }
 
 const router = useRouter();
@@ -103,37 +103,33 @@ onMounted(() => {
 })
 
 
-
-
 </script>
 
 <template>
   <div class="relative">
-    <div class="fade-in" data-fade-after="0.8">
-      <img src="/image/background.jpg" alt="background image"
-           class="absolute width-100 height-100 cover overflow-hidden z-index-negative-3">
+    <div id="background" class="fade-in fast-scroll" data-fade-after="0.8">
       <div class="absolute width-100 height-100 bg-black opacity-50 z-index-negative-2"/>
     </div>
     <nav id="links" class="row center white fade-in" data-fade-after="1.2">
-      <div id="portfolio-link">
-        <router-link to="/portfolio" class="hover-scale no-decoration">Portfolio</router-link>
+      <div id="portfolio-link" class="hover-scale">
+        <router-link to="/portfolio" class="no-decoration">Portfolio</router-link>
         <hr>
       </div>
       <div class="row" id="links-right">
-        <div id="home-link">
-          <router-link to="/" class="hover-scale no-decoration">Home</router-link>
+        <div id="home-link" class="hover-scale">
+          <router-link to="/" class="no-decoration">Home</router-link>
           <hr>
         </div>
-        <div id="about-link">
-          <router-link to="/about" class="hover-scale no-decoration">About</router-link>
+        <div id="about-link" class="hover-scale">
+          <router-link to="/about" class="no-decoration">About</router-link>
           <hr>
         </div>
-        <div id="services-link">
-          <router-link to="/services" class="hover-scale no-decoration">Services</router-link>
+        <div id="services-link" class="hover-scale">
+          <router-link to="/services" class="no-decoration">Services</router-link>
           <hr>
         </div>
-        <div id="contact-link">
-          <router-link to="/contact" class="hover-scale no-decoration">Contact</router-link>
+        <div id="contact-link" class="hover-scale">
+          <router-link to="/contact" class="no-decoration">Contact</router-link>
           <hr>
         </div>
       </div>
@@ -155,6 +151,18 @@ onMounted(() => {
 </template>
 
 <style scoped>
+
+#background {
+  position: absolute;
+  background-image: url("/image/header-background.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
 
 nav {
   height: 50px;
@@ -185,7 +193,7 @@ nav {
 
 .active hr {
   width: 70% !important;
-  border-width: 1px !important;
+  border-width: 0.04rem !important;
 }
 
 #links-right {
