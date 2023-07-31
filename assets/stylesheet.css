@@ -538,10 +538,15 @@ body {
     }
 }
 
-.fade-in {
-    opacity: 0;
-    transition: opacity 0.2s ease-in;
-}
+/*.fade-in {*/
+/*    opacity: 0;*/
+/*    transition: opacity 0.2s ease-in;*/
+/*}*/
 .show {
     opacity: 1;
+}
+
+.no-decoration {
+    text-decoration: none;
+    color: white;
 }

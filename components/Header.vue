@@ -1,5 +1,6 @@
 <script setup lang="ts">
 
+import {getElementById} from "domutils";
 
 const subtitles = [
   "Hi, I'm a Software Developer.",
@@ -16,6 +17,36 @@ let pause = pauseInterval;
 
 let forward = true;
 
+function moveForward(string: string) {
+  if (char < string.length) {
+    subtitle.value = string.substring(0, char + 1);
+    if (subtitle.value.endsWith(" ") && char < string.length - 1) {
+      char++;
+      subtitle.value = string.substring(0, char + 1);
+    }
+    char++;
+    pause = 1; // pause for 1 frame when going forward - this makes going forward 2x as fast
+  } else {
+    forward = false;
+    pause = pauseInterval;
+  }
+}
+
+function moveBackward(string: string) {
+  if (char > 0) {
+    subtitle.value = string.substring(0, char - 1);
+    if (subtitle.value.endsWith(" ") && char > 1) {
+      char--;
+      subtitle.value = string.substring(0, char - 1);
+    }
+    char--;
+  } else {
+    forward = true;
+    index++;
+    pause = pauseInterval;
+  }
+}
+
 function nextChar() {
   if (pause > 0) {
     pause--;
@@ -23,46 +54,56 @@ function nextChar() {
   }
 
   let string = subtitles[index];
-
-
   if (forward) {
-    if (char < string.length) {
-      subtitle.value = string.substring(0, char + 1);
-      if (subtitle.value.endsWith(" ") && char < string.length - 1) {
-        char++;
-        subtitle.value = string.substring(0, char + 1);
-      }
-      char++;
-      pause = 1; // pause for 1 frame when going forward - this makes going forward 2x as fast
-    } else {
-      forward = false;
-      pause = pauseInterval;
-      return;
-    }
+    moveForward(string);
   } else {
-    if (char > 0) {
-      subtitle.value = string.substring(0, char - 1);
-      if (subtitle.value.endsWith(" ") && char > 1) {
-        char--;
-        subtitle.value = string.substring(0, char - 1);
-      }
-      char--;
-    } else {
-      forward = true;
-      index++;
-      pause = pauseInterval;
-    }
+    moveBackward(string);
   }
-
 
   if (index >= subtitles.length) {
     index = 0;
   }
 }
 
-setInterval(() => {
-  nextChar();
-}, 50);
+
+let oldActiveLink = "";
+
+function updateActiveLink(path: string) {
+  document.getElementById(oldActiveLink)?.classList.remove("active");
+  let activeLink = "";
+
+  if (path === "/" || path === "") {
+    activeLink = "home-link";
+  } else if (path.startsWith("/about")) {
+    activeLink = "about-link";
+  } else if (path.startsWith("/services")) {
+    activeLink = "services-link";
+  } else if (path.startsWith("/portfolio")) {
+    activeLink = "portfolio-link";
+  }
+
+  document.getElementById(activeLink)?.classList.add("active");
+
+  oldActiveLink = activeLink;
+
+  console.log("active link: " + activeLink);
+}
+
+const router = useRouter();
+
+onMounted(() => {
+  setInterval(() => {
+    nextChar();
+  }, 50);
+
+  updateActiveLink(router.currentRoute.value.path);
+  watch(() => router.currentRoute.value.path, (newPath) => {
+    updateActiveLink(newPath);
+  })
+})
+
+
+
 
 </script>
 
@@ -73,13 +114,28 @@ setInterval(() => {
            class="absolute width-100 height-100 cover overflow-hidden z-index-negative-3">
       <div class="absolute width-100 height-100 bg-black opacity-50 z-index-negative-2"/>
     </div>
-    <nav class="row center white fade-in" data-fade-after="1.2">
-      <p id="label" class="hover-scale">Portfolio</p>
-      <div class="row" id="links">
-        <p class="hover-scale">Home</p>
-        <p class="hover-scale">About</p>
-        <p class="hover-scale">Services</p>
-        <p class="hover-scale">Contact</p>
+    <nav id="links" class="row center white fade-in" data-fade-after="1.2">
+      <div id="portfolio-link">
+        <router-link to="/portfolio" class="hover-scale no-decoration">Portfolio</router-link>
+        <hr>
+      </div>
+      <div class="row" id="links-right">
+        <div id="home-link">
+          <router-link to="/" class="hover-scale no-decoration">Home</router-link>
+          <hr>
+        </div>
+        <div id="about-link">
+          <router-link to="/about" class="hover-scale no-decoration">About</router-link>
+          <hr>
+        </div>
+        <div id="services-link">
+          <router-link to="/services" class="hover-scale no-decoration">Services</router-link>
+          <hr>
+        </div>
+        <div id="contact-link">
+          <router-link to="/contact" class="hover-scale no-decoration">Contact</router-link>
+          <hr>
+        </div>
       </div>
     </nav>
 
@@ -103,9 +159,36 @@ setInterval(() => {
 nav {
   height: 50px;
   padding-inline: 15rem;
+  padding-top: 0.3rem;
 }
 
 #links {
+  height: 2rem;
+}
+
+#links div {
+  height: 100%;
+}
+
+#links hr {
+  margin-top: 0;
+  border: 0 solid white;
+  width: 0;
+  margin-right: 0;
+  transition: width 0.5s ease, border-width 0.5s ease;
+}
+
+#portfolio-link hr {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.active hr {
+  width: 70% !important;
+  border-width: 1px !important;
+}
+
+#links-right {
   justify-content: space-between;
   margin-left: auto;
   gap: 3rem;
