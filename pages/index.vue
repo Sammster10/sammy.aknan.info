@@ -3,15 +3,16 @@ import DestinationRight from "~/components/DestinationRight.vue";
 </script>
 
 <template>
+  <title>Sammy | Home</title>
   <div class="relative">
     <div id="vertical-line"/>
     <div class="row">
       <div class="column">
         <DestinationLeft>
-          <Card date="2018">
+          <Card date="2018" img="/image/command_blocks.webp">
             <template v-slot:header>
               <h3 class="block-margin-0 letter-spacing-negative-05">Minecraft Commands:</h3>
-              <hr class="left">
+              <hr class="right">
             </template>
             <p>
               It all began with Minecraft. The creativity that I was offered was unmatched - it trained my brain and
@@ -25,10 +26,10 @@ import DestinationRight from "~/components/DestinationRight.vue";
           </Card>
         </DestinationLeft>
         <DestinationLeft>
-          <Card date="2021">
+          <Card date="2021" img="/image/plugins.webp">
             <template v-slot:header>
               <h3 class="block-margin-0 letter-spacing-negative-05">Minecraft Plugins:</h3>
-              <hr class="left">
+              <hr class="right">
             </template>
             <p>
               Up until this point, I was only playing Minecraft Bedrock Edition, and this was a huge limitation. I
@@ -45,10 +46,10 @@ import DestinationRight from "~/components/DestinationRight.vue";
         <!-- spacer -->
         <div/>
         <DestinationRight>
-          <Card date="2019">
+          <Card date="2019" img="/image/realms.webp">
             <template v-slot:header>
               <h3 class="block-margin-0 letter-spacing-negative-05">Minecraft Realms:</h3>
-              <hr class="left">
+              <hr class="right">
             </template>
             <p>
               Moving on to bigger and better things, I gathered a team of staff members and we began to develop a
@@ -63,10 +64,10 @@ import DestinationRight from "~/components/DestinationRight.vue";
           </Card>
         </DestinationRight>
         <DestinationRight>
-          <Card date="2021">
+          <Card date="2021" img="/image/java.webp">
             <template v-slot:header>
               <h3 class="block-margin-0 letter-spacing-negative-05">Minecraft Servers:</h3>
-              <hr class="left">
+              <hr class="right">
             </template>
             <p>
               With my knowledge of of Java, I created a Minecraft Java Edition server, and I surprised myself with what
@@ -89,7 +90,7 @@ import DestinationRight from "~/components/DestinationRight.vue";
   top: 0;
   left: 50%;
   width: 0.4rem;
-  height: 100%;
+  height: calc(100% - 9rem);
   background-color: #727272;
 }
 

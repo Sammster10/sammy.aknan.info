@@ -4,8 +4,10 @@ import {getElementById} from "domutils";
 
 const subtitles = [
   "Hi, I'm a Software Developer.",
-  "I'm proficient in: Java, Python, JS, HTML, CSS & Linux.",
+  "Proficient in: Java, Python, JS, HTML, CSS & Linux.",
   "I'm a Computer Science Major at Virginia Tech.",
+  "By no means am I a graphic designer, I just like to code.",
+  "Want to learn about my history? Explore the home page!",
 ]
 
 const subtitle = ref(subtitles[0]);
@@ -106,9 +108,8 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="relative">
+  <div class="relative" id="header">
     <div id="background" class="fade-in fast-scroll" data-fade-after="0.8">
-      <div class="absolute width-100 height-100 bg-black opacity-50 z-index-negative-2"/>
     </div>
     <nav id="links" class="row center white fade-in" data-fade-after="1.2">
       <div id="portfolio-link" class="hover-scale">
@@ -135,16 +136,17 @@ onMounted(() => {
       </div>
     </nav>
 
-    <div class="white letter-spacing-negative-05 txt-center block-pad-3 fade-in" data-fade-after="1.6">
-      <div
-          class="border-circle border-white border-1 width-max inline-margin-auto block-margin-1 aspect-ratio-1-1 overflow-hidden hover-scale">
-        <img src="/image/profile.jpg" alt="profile image" class="width-size-9"/>
+    <div id="profile" class="white letter-spacing-negative-05 txt-center">
+      <div id="profile-pic" class="hover-scale fade-in" data-fade-after="2">
+        <img src="/image/profile.jpg" alt="profile image"/>
       </div>
-      <p class="font-size-3 font-weight-700 width-max block-margin-0 inline-margin-auto hover-scale">Sammy<span
-          class="font-size-1-5">&nbsp;</span>Aknan</p>
-      <div class="row font-size-1-5 font-weight-200 width-max block-margin-0 inline-margin-auto hover-scale">
-        <p class="margin-0">{{ subtitle }}</p>
-        <div class="cursor-blink"/>
+      <div class="fade-in" data-fade-after="2.4">
+        <p class="font-size-3 font-weight-700 width-max block-margin-0 inline-margin-auto hover-scale">Sammy<span
+            class="font-size-1-5">&nbsp;</span>Aknan</p>
+        <div class="row font-size-1-5 font-weight-200 width-max block-margin-0 inline-margin-auto hover-scale">
+          <p class="margin-0">{{ subtitle }}</p>
+          <div class="cursor-blink"/>
+        </div>
       </div>
     </div>
   </div>
@@ -152,16 +154,32 @@ onMounted(() => {
 
 <style scoped>
 
+p, a {
+  text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+}
+
+#header {
+  min-height: 100vh;
+}
+
 #background {
   position: absolute;
   background-image: url("/image/header-background.jpg");
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-size: cover;
   background-position: center top;
+  background-size: cover;
   height: 100%;
   width: 100%;
   z-index: -1;
+}
+
+#background::before {
+  content: "";
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.1);
+  height: 100%;
+  width: 100%;
 }
 
 nav {
@@ -184,6 +202,24 @@ nav {
   width: 0;
   margin-right: 0;
   transition: width 0.5s ease, border-width 0.5s ease;
+}
+
+#profile {
+  padding-block: 10rem;
+}
+
+#profile-pic {
+  border-radius: 50%;
+  border: 0.2rem solid white;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  margin: 0 auto;
+  width: max-content;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+#profile-pic img {
+  width: 15rem;
 }
 
 #portfolio-link hr {

@@ -545,7 +545,7 @@ body {
 
 .fade-in-on-screen {
     opacity: 0;
-    transition: opacity 0.5s ease-in;
+    transition: opacity 1s ease;
 }
 
 .show {
