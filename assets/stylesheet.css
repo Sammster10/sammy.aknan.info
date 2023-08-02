@@ -3,6 +3,7 @@
 :root {
     font-family: 'Roboto Mono', monospace;
     font-size: max(5px, 1.25vw);
+    --line-color: #727272;
 }
 
 

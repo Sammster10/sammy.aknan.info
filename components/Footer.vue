@@ -3,7 +3,6 @@
 </script>
 
 <template>
-foot
 </template>
 
 <style scoped>

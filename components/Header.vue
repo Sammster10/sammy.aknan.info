@@ -109,32 +109,42 @@ onMounted(() => {
 
 <template>
   <div class="relative" id="header">
-    <div id="background" class="fade-in fast-scroll" data-fade-after="0">
-    </div>
-    <nav id="links" class="row center white fade-in" data-fade-after="0.4">
-      <div id="portfolio-link" class="hover-scale">
-        <router-link to="/portfolio" class="no-decoration">Portfolio</router-link>
-        <hr>
-      </div>
-      <div class="row" id="links-right">
-        <div id="home-link" class="hover-scale">
-          <router-link to="/" class="no-decoration">Home</router-link>
-          <hr>
+      <div id="nav-background" />
+      <div id="background" class="fast-scroll" />
+      <nav id="links" class="row center white fade-in" data-fade-after="0.4">
+        <router-link to="/portfolio" class="no-decoration">
+          <div id="portfolio-link" class="hover-scale">
+            Portfolio
+            <hr>
+          </div>
+        </router-link>
+        <div class="row" id="links-right">
+          <router-link to="/" class="no-decoration">
+            <div id="home-link" class="hover-scale">
+              Home
+              <hr>
+            </div>
+          </router-link>
+          <router-link to="/about" class="no-decoration">
+            <div id="about-link" class="hover-scale">
+              About
+              <hr>
+            </div>
+          </router-link>
+          <router-link to="/services" class="no-decoration">
+            <div id="services-link" class="hover-scale">
+              Services
+              <hr>
+            </div>
+          </router-link>
+          <router-link to="/contact" class="no-decoration">
+            <div id="contact-link" class="hover-scale">
+              Contact
+              <hr>
+            </div>
+          </router-link>
         </div>
-        <div id="about-link" class="hover-scale">
-          <router-link to="/about" class="no-decoration">About</router-link>
-          <hr>
-        </div>
-        <div id="services-link" class="hover-scale">
-          <router-link to="/services" class="no-decoration">Services</router-link>
-          <hr>
-        </div>
-        <div id="contact-link" class="hover-scale">
-          <router-link to="/contact" class="no-decoration">Contact</router-link>
-          <hr>
-        </div>
-      </div>
-    </nav>
+      </nav>
 
     <div id="profile" class="white letter-spacing-negative-05 txt-center">
       <div id="profile-pic" class="hover-scale fade-in" data-fade-after="0.8">
@@ -171,7 +181,7 @@ p, a {
   background-size: cover;
   height: 100%;
   width: 100%;
-  z-index: -1;
+  z-index: 2;
 }
 
 #background::before {
@@ -183,9 +193,20 @@ p, a {
 }
 
 nav {
-  height: 50px;
+  height: 2rem;
   padding-inline: 15rem;
-  padding-top: 0.3rem;
+  position: fixed;
+  width: calc(100% - 30rem);
+  z-index: 4;
+}
+
+#nav-background {
+  background-color: rgba(0, 0, 0, 0.5);
+  content: "";
+  height: 2rem;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
 }
 
 #links {
@@ -205,7 +226,9 @@ nav {
 }
 
 #profile {
+  position: relative;
   padding-block: 10rem;
+  z-index: 3;
 }
 
 #profile-pic {

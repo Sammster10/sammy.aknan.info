@@ -1,9 +1,5 @@
 <script setup lang="ts">
 defineProps({
-  date: {
-    type: String,
-    default: "DATE",
-  },
   img: {
     type: String,
     default: "",
@@ -17,7 +13,6 @@ defineProps({
 
 <template>
   <div class="card">
-    <div class="date">Year: {{ date }}</div>
     <div class="card-header">
       {{ header }}
     </div>
@@ -31,15 +26,6 @@ defineProps({
 </template>
 
 <style scoped>
-
-.date {
-  position: absolute;
-  bottom: 0.5rem;
-  right: 0.5rem;
-  font-size: 0.8rem;
-  font-weight: 500;
-  letter-spacing: -0.1rem;
-}
 
 .card-header {
   font-size: 1.2rem;

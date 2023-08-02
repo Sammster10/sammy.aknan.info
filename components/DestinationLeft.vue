@@ -1,12 +1,20 @@
 <script setup lang="ts">
-
+defineProps({
+  date: {
+    type: String,
+    default: "DATE",
+  },
+})
 </script>
 
 <template>
   <div class="destination">
-    <div class=" fade-in-on-screen">
+    <div class="fade-in-on-screen">
       <div class="relative">
         <div class="border"/>
+        <div class="date">
+          {{ date }}
+        </div>
       </div>
       <div class="container">
         <slot/>
@@ -24,7 +32,7 @@
 
 .container {
   padding-right: 4rem;
-  padding-left: 2rem;
+  padding-left: 3rem;
 }
 
 .border {
@@ -34,11 +42,21 @@
   width: 20rem;
   height: 10rem;
 
-  border-color: #727272;
+  border-color: var(--line-color);
   border-radius: 0 0 2.5rem 0;
   border-width: 0 0.4rem 0.4rem 0;
   border-style: solid;
   z-index: -1;
+}
+
+.date {
+  position: absolute;
+  top: 8.5rem;
+  right: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: -0.1rem;
+  color: var(--line-color);
 }
 
 </style>

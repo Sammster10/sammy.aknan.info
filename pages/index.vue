@@ -15,8 +15,8 @@ const rightCards = roadmapConfig.roadmap.filter((_, index) => index % 2 === 1);
     <div class="row">
       <div class="column">
         <div class="width-100" v-for="card in leftCards">
-          <DestinationLeft>
-            <Card :header="card.header" :date="card.date" :img="card.image">
+          <DestinationLeft :date="card.date">
+            <Card :header="card.header" :img="card.image">
               <p v-for="desc in card.description">
                 {{ desc }}
               </p>
@@ -28,8 +28,8 @@ const rightCards = roadmapConfig.roadmap.filter((_, index) => index % 2 === 1);
         <!-- spacer -->
         <div/>
         <div class="width-100" v-for="card in rightCards">
-          <DestinationRight>
-            <Card :header="card.header" :date="card.date" :img="card.image">
+          <DestinationRight :date="card.date">
+            <Card :header="card.header" :img="card.image">
               <p v-for="desc in card.description">
                 {{ desc }}
               </p>
