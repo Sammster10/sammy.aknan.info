@@ -1,0 +1,44 @@
+{
+  "roadmap": [
+    {
+      "header": "Minecraft Commands",
+      "date": "2018",
+      "description": [
+        "Description Description Description Description Description "
+        ],
+      "image": "/image/command_block.webp"
+    },
+    {
+      "header": "Minecraft Realms",
+      "date": "2019",
+      "description": [
+        "Description Description Description Description Description "
+      ],
+      "image": "/image/realms.webp"
+    },
+    {
+      "header": "Minecraft Plugins",
+      "date": "2020",
+      "description": [
+        "Description Description Description Description Description "
+      ],
+      "image": "/image/plugins.webp"
+    },
+    {
+      "header": "Minecraft Servers",
+      "date": "2021",
+      "description": [
+        "Description Description Description Description Description "
+      ],
+      "image": "/image/java.webp"
+    },
+    {
+      "header": "Web Development",
+      "date": "2018",
+      "description": [
+        "Description Description Description Description Description "
+      ],
+      "image": "/image/command_block.webp"
+    }
+  ]
+}

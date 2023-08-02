@@ -109,9 +109,9 @@ onMounted(() => {
 
 <template>
   <div class="relative" id="header">
-    <div id="background" class="fade-in fast-scroll" data-fade-after="0.8">
+    <div id="background" class="fade-in fast-scroll" data-fade-after="0">
     </div>
-    <nav id="links" class="row center white fade-in" data-fade-after="1.2">
+    <nav id="links" class="row center white fade-in" data-fade-after="0.4">
       <div id="portfolio-link" class="hover-scale">
         <router-link to="/portfolio" class="no-decoration">Portfolio</router-link>
         <hr>
@@ -137,10 +137,10 @@ onMounted(() => {
     </nav>
 
     <div id="profile" class="white letter-spacing-negative-05 txt-center">
-      <div id="profile-pic" class="hover-scale fade-in" data-fade-after="2">
+      <div id="profile-pic" class="hover-scale fade-in" data-fade-after="0.8">
         <img src="/image/profile.jpg" alt="profile image"/>
       </div>
-      <div class="fade-in" data-fade-after="2.4">
+      <div class="fade-in" data-fade-after="1.2">
         <p class="font-size-3 font-weight-700 width-max block-margin-0 inline-margin-auto hover-scale">Sammy<span
             class="font-size-1-5">&nbsp;</span>Aknan</p>
         <div class="row font-size-1-5 font-weight-200 width-max block-margin-0 inline-margin-auto hover-scale">
@@ -177,7 +177,7 @@ p, a {
 #background::before {
   content: "";
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(40, 40, 40, 0.5);
   height: 100%;
   width: 100%;
 }
@@ -219,7 +219,7 @@ nav {
 }
 
 #profile-pic img {
-  width: 15rem;
+  width: 10rem;
 }
 
 #portfolio-link hr {

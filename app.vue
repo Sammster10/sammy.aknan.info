@@ -104,9 +104,9 @@ onMounted(() => {
 </script>
 
 <template>
-  <div id="main-background" class="slow-scroll fade-in" data-fade-after="2.8"/>
+  <div id="main-background" class="slow-scroll"/>
   <Header/>
-  <div class="fade-in" data-fade-after="3.6">
+  <div class="fade-in" data-fade-after="2">
     <NuxtPage/>
     <Footer/>
   </div>

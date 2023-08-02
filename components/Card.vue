@@ -8,16 +8,18 @@ defineProps({
     type: String,
     default: "",
   },
+  header: {
+    type: String,
+    default: "HEADER",
+  },
 })
 </script>
 
 <template>
   <div class="card">
-    <div class="date">
-      Year: {{ date }}
-    </div>
+    <div class="date">Year: {{ date }}</div>
     <div class="card-header">
-      <slot name="header"></slot>
+      {{ header }}
     </div>
     <div class="card-body">
       <slot></slot>
@@ -32,14 +34,18 @@ defineProps({
 
 .date {
   position: absolute;
-  top: 0;
-  left: 0;
-  padding: 0.4rem;
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: white;
-  background-color: black;
-  border-radius: 0 0 0 0.75rem;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: -0.1rem;
+}
+
+.card-header {
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: -0.05rem;
+  margin-left: 10rem;
 }
 
 .card {
@@ -53,11 +59,11 @@ defineProps({
 
 .card-body {
   font-size: 0.8rem;
-  margin-left: 10rem
+  margin-left: 10rem;
 }
 
-.card-header {
-  text-align: right;
+.card-body  {
+  margin-top: 1rem;
 }
 
 img {
@@ -79,7 +85,7 @@ img {
   height: 8rem;
   padding: 1.25rem;
   border-radius: 0.5rem;
-  background-image: linear-gradient(to bottom right, #46fff7, #c462ff 70%);
-  box-shadow: 0 0 0.5rem rgba(196, 98, 255, 0.3)
+  background-image: linear-gradient(to bottom right, #ff8f00 20%, #ff0000);
+  box-shadow: 0 0 0.5rem rgba(255, 98, 205, 0.3)
 }
 </style>
