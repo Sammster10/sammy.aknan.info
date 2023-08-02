@@ -193,7 +193,7 @@ p, a {
 }
 
 nav {
-  height: 2rem;
+  height: 1.75rem;
   padding-inline: 15rem;
   position: fixed;
   width: calc(100% - 30rem);
@@ -203,7 +203,7 @@ nav {
 #nav-background {
   background-color: rgba(0, 0, 0, 0.5);
   content: "";
-  height: 2rem;
+  height: 1.75rem;
   position: fixed;
   width: 100%;
   z-index: 1;
