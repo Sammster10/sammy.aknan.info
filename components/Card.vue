@@ -48,10 +48,6 @@ defineProps({
   margin-left: 10rem;
 }
 
-.card-body  {
-  margin-top: 1rem;
-}
-
 img {
   max-width: 80%;
   max-height: 80%;

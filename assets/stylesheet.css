@@ -6,6 +6,10 @@
     --line-color: #727272;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 
 body {
     margin: 0;

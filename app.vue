@@ -104,10 +104,8 @@ onMounted(() => {
 <template>
   <div id="main-background" class="slow-scroll"/>
   <Header/>
-  <div class="fade-in" data-fade-after="2">
-    <NuxtPage/>
-    <Footer/>
-  </div>
+  <NuxtPage/>
+  <Footer/>
 </template>
 
 <style scoped>
@@ -118,7 +116,7 @@ onMounted(() => {
   left: 0;
   width: 100vw;
   aspect-ratio: 4447 / 6670;
-  background-image:  url("/image/background.jpg");
+  background-image: url("/image/background.jpg");
   background-size: 100%;
   background-repeat: repeat-y;
   z-index: -1;

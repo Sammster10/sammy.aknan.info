@@ -8,14 +8,14 @@ defineProps({
 </script>
 
 <template>
+  <div class="relative">
+    <div class="border"/>
+    <div class="date">
+      {{ date }}
+    </div>
+  </div>
   <div class="destination">
     <div class="fade-in-on-screen">
-      <div class="relative">
-        <div class="border"/>
-        <div class="date">
-          {{ date }}
-        </div>
-      </div>
       <div class="container">
         <slot/>
       </div>
@@ -39,7 +39,7 @@ defineProps({
   content: "";
   position: absolute;
   right: -0.4rem;
-  width: 20rem;
+  width: 5rem;
   height: 10rem;
 
   border-color: var(--line-color);

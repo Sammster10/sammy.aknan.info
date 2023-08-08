@@ -4,15 +4,15 @@
       "header": "Minecraft Commands",
       "date": "2018",
       "description": [
-        "Description Description Description Description Description "
-        ],
+        "Jump starting my interest in Software Development, Minecraft gave me my first introduction to programming. Comparable to block programming, I started out by learning Minecraft commands. This was enough for 13 year old me, but as I grew older, I began to realize that there were limitations to this. Soon after, I followed the popular path and tried to learn Python and JavaScript."
+      ],
       "image": "/image/command_block.webp"
     },
     {
       "header": "Minecraft Realms",
       "date": "2019",
       "description": [
-        "Description Description Description Description Description "
+        "I am a strong believer that learning to code is easy, the hard part is finding a project to work on. Luckily for me, I had already found my project: Minecraft Realms. I started out exclusively using commands, but that quickly changed and I was integrating JavaScript into my projects. Alongside my learning, my Realms had 40 concurrent players online almost constantly. I offered a variety of game-modes for my player-base. Furthermore, these game-modes generated a profit."
       ],
       "image": "/image/realms.webp"
     },
@@ -20,25 +20,25 @@
       "header": "Minecraft Plugins",
       "date": "2020",
       "description": [
-        "Description Description Description Description Description "
+        "Furthering my learning, I made the jump from Minecraft Bedrock Edition to Minecraft Java Edition. While it sounds like a small change, it was critical one. It provided me with a platform to learn Java, so quickly I began developing Minecraft plugins. I easily fell in love with Java and object-oriented programming. It allowed me to begin working on my first large-scale project without losing my mind: A Minecraft Prison Server."
       ],
-      "image": "/image/plugins.webp"
+      "image": "/image/java.svg"
     },
     {
       "header": "Minecraft Servers",
       "date": "2021",
       "description": [
-        "Description Description Description Description Description "
+        "The next step in my journey was to put all the pieces together and create a preformat game server. There were multiple aspects to manage, including: a server plugin optimized for high-frequency, a website users could interact with, a webs tore for players to make purchases, a central SQL database for all the applications to share, a Discord bot for users to cross-link their accounts from Discord to Minecraft making use of the aforementioned database, and finally a staff team to oversee players."
       ],
-      "image": "/image/java.webp"
+      "image": "/image/papermc.webp"
     },
     {
       "header": "Web Development",
       "date": "2022",
       "description": [
-        "Description Description Description Description Description "
+        "Initially, I started using raw HTML & CSS to create websites, however there are inherent limitations to this. I then moved to using frameworks, such as ReactJS or VueJS to create websites. This was much better and I was able to create more complex sites without getting lost in the code. Additionally, I started using Spring Boot to manage my backend and create RESTful APIs."
       ],
-      "image": "/image/command_block.webp"
+      "image": "/image/webdev.svg"
     }
   ]
 }

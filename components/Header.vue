@@ -1,19 +1,10 @@
 <script setup lang="ts">
+import config from "~/assets/config/subtitles.json";
 
-import {getElementById} from "domutils";
-
-const subtitles = [
-  "Hi, I'm a Software Developer.",
-  "Proficient in: Java, Python, JS, HTML, CSS & Linux.",
-  "I'm a Computer Science Major at Virginia Tech.",
-  "By no means am I a graphic designer, I just like to code.",
-  "Want to learn about my history? Explore the home page!",
-]
-
-const subtitle = ref(subtitles[0]);
+const subtitle = ref(config.subtitles[0]);
 
 let index = 0;
-let char = subtitles[0].length;
+let char = config.subtitles[0].length;
 const pauseInterval = 40;
 let pause = pauseInterval;
 
@@ -55,14 +46,14 @@ function nextChar() {
     return;
   }
 
-  let string = subtitles[index];
+  let string = config.subtitles[index];
   if (forward) {
     moveForward(string);
   } else {
     moveBackward(string);
   }
 
-  if (index >= subtitles.length) {
+  if (index >= config.subtitles.length) {
     index = 0;
   }
 }
@@ -150,7 +141,7 @@ onMounted(() => {
       <div id="profile-pic" class="hover-scale fade-in" data-fade-after="0.8">
         <img src="/image/profile.jpg" alt="profile image"/>
       </div>
-      <div class="fade-in" data-fade-after="1.2">
+      <div class="fade-in" data-fade-after="1.4">
         <p class="font-size-3 font-weight-700 width-max block-margin-0 inline-margin-auto hover-scale">Sammy<span
             class="font-size-1-5">&nbsp;</span>Aknan</p>
         <div class="row font-size-1-5 font-weight-200 width-max block-margin-0 inline-margin-auto hover-scale">
@@ -187,7 +178,7 @@ p, a {
 #background::before {
   content: "";
   position: absolute;
-  background-color: rgba(40, 40, 40, 0.5);
+  background-color: rgba(100, 100, 100, 0.1);
   height: 100%;
   width: 100%;
 }
