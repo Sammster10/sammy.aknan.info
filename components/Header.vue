@@ -1,10 +1,12 @@
 <script setup lang="ts">
-import config from "~/assets/config/subtitles.json";
+import config from "assets/config/config.json";
 
-const subtitle = ref(config.subtitles[0]);
+const subtitles = config.subtitles;
+
+const subtitle = ref(subtitles[0]);
 
 let index = 0;
-let char = config.subtitles[0].length;
+let char = subtitles[0].length;
 const pauseInterval = 40;
 let pause = pauseInterval;
 
@@ -46,14 +48,14 @@ function nextChar() {
     return;
   }
 
-  let string = config.subtitles[index];
+  let string = subtitles[index];
   if (forward) {
     moveForward(string);
   } else {
     moveBackward(string);
   }
 
-  if (index >= config.subtitles.length) {
+  if (index >= subtitles.length) {
     index = 0;
   }
 }
