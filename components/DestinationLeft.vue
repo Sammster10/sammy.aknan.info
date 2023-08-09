@@ -38,13 +38,13 @@ defineProps({
 .border {
   content: "";
   position: absolute;
-  right: -0.4rem;
+  right: -0.5rem;
   width: 5rem;
   height: 10rem;
 
   border-color: var(--line-color);
   border-radius: 0 0 2.5rem 0;
-  border-width: 0 0.4rem 0.4rem 0;
+  border-width: 0 0.5rem 0.5rem 0;
   border-style: solid;
   z-index: -1;
 }

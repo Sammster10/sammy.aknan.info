@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import config from "assets/config/config.json";
+import NavPullout from "~/components/NavPullout.vue";
+import {updateActiveLink} from "~/util/utils";
 
 const subtitles = config.subtitles;
 
@@ -61,28 +63,7 @@ function nextChar() {
 }
 
 
-let oldActiveLink = "";
-
-function updateActiveLink(path: string) {
-  document.getElementById(oldActiveLink)?.classList.remove("active");
-  let activeLink = "";
-
-  if (path === "/" || path === "") {
-    activeLink = "home-link";
-  } else if (path.startsWith("/about")) {
-    activeLink = "about-link";
-  } else if (path.startsWith("/services")) {
-    activeLink = "services-link";
-  } else if (path.startsWith("/contact")) {
-    activeLink = "contact-link";
-  } else if (path.startsWith("/portfolio")) {
-    activeLink = "portfolio-link";
-  }
-
-  document.getElementById(activeLink)?.classList.add("active");
-
-  oldActiveLink = activeLink;
-}
+let oldActiveLink = "home-link";
 
 const router = useRouter();
 
@@ -91,9 +72,10 @@ onMounted(() => {
     nextChar();
   }, 50);
 
-  updateActiveLink(router.currentRoute.value.path);
+
+  oldActiveLink = updateActiveLink("nav-container", router.currentRoute.value.path, oldActiveLink);
   watch(() => router.currentRoute.value.path, (newPath) => {
-    updateActiveLink(newPath);
+    oldActiveLink = updateActiveLink("nav-container", router.currentRoute.value.path, oldActiveLink);
   })
 })
 
@@ -102,55 +84,57 @@ onMounted(() => {
 
 <template>
   <div class="relative" id="header">
-    <div id="nav-background"/>
+    <div id="nav-background" class="desktop-only"/>
     <div id="background" class="fast-scroll"/>
-    <div id="nav-container">
-      <nav class="fade-in" data-fade-after="0.4">
-        <router-link to="/portfolio" class="no-decoration">
-          <div id="portfolio-link" class="hover-scale">
-            Portfolio
-            <hr>
+    <NavPullout/>
+    <div class="desktop-only">
+      <div id="nav-container">
+        <nav class="fade-in" data-fade-after="0.4">
+          <router-link to="/portfolio" class="no-decoration">
+            <div id="portfolio-link" class="hover-scale">
+              Portfolio
+              <hr>
+            </div>
+          </router-link>
+          <div class="row" id="links-right">
+            <router-link to="/" class="no-decoration">
+              <div id="home-link" class="hover-scale">
+                Home
+                <hr>
+              </div>
+            </router-link>
+            <router-link to="/about" class="no-decoration">
+              <div id="about-link" class="hover-scale">
+                About
+                <hr>
+              </div>
+            </router-link>
+            <router-link to="/services" class="no-decoration">
+              <div id="services-link" class="hover-scale">
+                Services
+                <hr>
+              </div>
+            </router-link>
+            <router-link to="/contact" class="no-decoration">
+              <div id="contact-link" class="hover-scale">
+                Contact
+                <hr>
+              </div>
+            </router-link>
           </div>
-        </router-link>
-        <div class="row" id="links-right">
-          <router-link to="/" class="no-decoration">
-            <div id="home-link" class="hover-scale">
-              Home
-              <hr>
-            </div>
-          </router-link>
-          <router-link to="/about" class="no-decoration">
-            <div id="about-link" class="hover-scale">
-              About
-              <hr>
-            </div>
-          </router-link>
-          <router-link to="/services" class="no-decoration">
-            <div id="services-link" class="hover-scale">
-              Services
-              <hr>
-            </div>
-          </router-link>
-          <router-link to="/contact" class="no-decoration">
-            <div id="contact-link" class="hover-scale">
-              Contact
-              <hr>
-            </div>
-          </router-link>
-        </div>
-      </nav>
+        </nav>
+      </div>
     </div>
 
-    <div id="profile" class="white letter-spacing-negative-05 txt-center">
+    <div id="profile" class="white letter-spacing-negative-05 txt-center width-100">
       <div id="profile-pic" class="hover-scale fade-in" data-fade-after="0.8">
         <img src="/image/profile.jpg" alt="profile image"/>
       </div>
       <div class="fade-in" data-fade-after="1.4">
         <p class="font-size-3 font-weight-700 width-max block-margin-0 inline-margin-auto hover-scale">Sammy<span
             class="font-size-1-5">&nbsp;</span>Aknan</p>
-        <div class="row font-size-1-5 font-weight-200 width-max block-margin-0 inline-margin-auto hover-scale">
-          <p class="margin-0">{{ subtitle }}</p>
-          <div class="cursor-blink"/>
+        <div id="subtitles" class="hover-scale">
+          <div class="margin-0">{{ subtitle }}<span class="cursor-blink"/></div>
         </div>
       </div>
     </div>
@@ -172,7 +156,7 @@ p, a {
   background-image: url("/image/header-background.jpg");
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-position: center top;
+  background-position: center;
   background-size: cover;
   height: 100%;
   width: 100%;
@@ -185,6 +169,16 @@ p, a {
   background-color: rgba(100, 100, 100, 0.1);
   height: 100%;
   width: 100%;
+}
+
+#subtitles {
+  display: inline;
+  font-size: 1.5rem;
+  font-weight: 200;
+  width: max-content;
+  max-width: 90%;
+  margin-block: 0;
+  margin-inline: auto;
 }
 
 #nav-container {
@@ -266,8 +260,8 @@ nav hr {
   display: inline-block;
   width: 0.1rem;
   margin-left: 0.2rem;
-  margin-block: 0.3em;
-  height: 1.2em;
+  margin-bottom: 0;
+  height: 1em;
   opacity: 1;
 }
 

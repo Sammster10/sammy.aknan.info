@@ -8,6 +8,12 @@
     font-size: min(24px, 1.25vw);
 }
 
+@media screen and (max-width: 768px) {
+    :root {
+        font-size: 3vw;
+    }
+}
+
 ::-webkit-scrollbar {
     display: none;
 }
@@ -41,9 +47,6 @@ body {
     display: none;
 }
 
-.mobile-only {
-    display: none;
-}
 
 .pad-1 {
     padding: 1rem;
@@ -539,9 +542,21 @@ body {
     aspect-ratio: 16 / 9;
 }
 
-@media only screen and (max-width: 768px) {
+.mobile-only {
+    display: none;
+}
+
+.desktop-only {
+    display: block;
+}
+
+@media screen and (max-width: 768px) {
     .mobile-only {
         display: block;
+    }
+
+    .desktop-only {
+        display: none;
     }
 }
 

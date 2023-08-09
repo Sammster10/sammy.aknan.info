@@ -40,9 +40,10 @@ defineProps({
   position: absolute;
   width: 5rem;
   height: 10rem;
+  left: 1rem;
 
   border-color: var(--line-color);
-  border-radius: 0 0 0 2.5rem;
+  border-radius: 0 0 0 2rem;
   border-width: 0 0 0.5rem 0.5rem;
   border-style: solid;
   z-index: -1;
@@ -51,7 +52,7 @@ defineProps({
 .date {
   position: absolute;
   top: 8.5rem;
-  left: 1.5rem;
+  left: 2rem;
   font-size: 1rem;
   font-weight: 500;
   letter-spacing: -0.1rem;
