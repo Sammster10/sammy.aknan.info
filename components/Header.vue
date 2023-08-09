@@ -186,10 +186,10 @@ p, a {
 }
 
 nav {
-  height: 1.75rem;
-  padding-inline: 15rem;
+  height: 2rem;
+  padding-inline: 20vw;
   position: fixed;
-  width: calc(100% - 30rem);
+  width: calc(100% - 40vw);
   z-index: 4;
 }
 
@@ -202,15 +202,11 @@ nav {
   z-index: 1;
 }
 
-#links {
-  height: 2rem;
-}
-
-#links div {
+nav div {
   height: 100%;
 }
 
-#links hr {
+nav hr {
   margin-top: 0;
   border: 0 solid white;
   width: 0;
@@ -219,8 +215,10 @@ nav {
 }
 
 #profile {
-  position: relative;
-  padding-block: 10rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 3;
 }
 

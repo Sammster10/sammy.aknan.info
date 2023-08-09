@@ -2,8 +2,10 @@
 
 :root {
     font-family: 'Roboto Mono', monospace;
-    font-size: max(5px, 1.25vw);
+    --max-content-width: 1919px;
     --line-color: #727272;
+
+    font-size: min(24px, max(5px, 1.25vw));
 }
 
 ::-webkit-scrollbar {
@@ -560,4 +562,8 @@ body {
 .no-decoration {
     text-decoration: none;
     color: white;
+}
+
+.width-clamp {
+    max-width: var(--max-content-width);
 }

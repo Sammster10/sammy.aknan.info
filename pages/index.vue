@@ -12,7 +12,7 @@ const rightCards = roadmapConfig.roadmap.filter((_, index) => index % 2 === 1);
   <title>Sammy | Home</title>
   <div class="relative">
     <div id="vertical-line"/>
-    <div class="row">
+    <div class="row width-clamp inline-margin-auto">
       <div class="column">
         <div class="width-100" v-for="card in leftCards">
           <DestinationLeft :date="card.date">
