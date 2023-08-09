@@ -5,7 +5,7 @@
     --max-content-width: 1919px;
     --line-color: #727272;
 
-    font-size: min(24px, max(5px, 1.25vw));
+    font-size: min(24px, 1.25vw);
 }
 
 ::-webkit-scrollbar {

@@ -102,9 +102,10 @@ onMounted(() => {
 
 <template>
   <div class="relative" id="header">
-      <div id="nav-background" />
-      <div id="background" class="fast-scroll" />
-      <nav id="links" class="row center white fade-in" data-fade-after="0.4">
+    <div id="nav-background"/>
+    <div id="background" class="fast-scroll"/>
+    <div id="nav-container">
+      <nav class="fade-in" data-fade-after="0.4">
         <router-link to="/portfolio" class="no-decoration">
           <div id="portfolio-link" class="hover-scale">
             Portfolio
@@ -138,6 +139,7 @@ onMounted(() => {
           </router-link>
         </div>
       </nav>
+    </div>
 
     <div id="profile" class="white letter-spacing-negative-05 txt-center">
       <div id="profile-pic" class="hover-scale fade-in" data-fade-after="0.8">
@@ -185,11 +187,17 @@ p, a {
   width: 100%;
 }
 
-nav {
-  height: 2rem;
-  padding-inline: 20vw;
+#nav-container {
   position: fixed;
-  width: calc(100% - 40vw);
+  width: 100%;
+  z-index: 4;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  margin-inline: auto;
+  width: max(30vw, calc(min(100%, var(--max-content-width)) - 40vw));
   z-index: 4;
 }
 
@@ -248,8 +256,8 @@ nav hr {
 
 #links-right {
   justify-content: space-between;
+  width: 50%;
   margin-left: auto;
-  gap: 3rem;
 }
 
 .cursor-blink {
