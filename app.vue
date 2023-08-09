@@ -2,7 +2,6 @@
 import Header from "~/components/Header.vue";
 import Footer from "~/components/Footer.vue";
 
-
 const elementsToFade: { [key: number]: object[] } = {};
 
 function slowScroll() {
@@ -118,6 +117,7 @@ onMounted(() => {
   aspect-ratio: 4447 / 6670;
   background-image: url("/image/background.jpg");
   background-size: 100%;
+  min-height: 100%;
   background-repeat: repeat-y;
   z-index: -1;
 }
@@ -128,6 +128,7 @@ onMounted(() => {
   top: 0;
   left: 0;
   width: 100vw;
+  min-height: 100%;
   aspect-ratio: 4447 / 6670;
   background-color: #ffffff;
   opacity: 0.9;

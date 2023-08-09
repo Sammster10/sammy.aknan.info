@@ -156,7 +156,7 @@ p, a {
   background-image: url("/image/header-background.jpg");
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center top;
   background-size: cover;
   height: 100%;
   width: 100%;
@@ -172,13 +172,12 @@ p, a {
 }
 
 #subtitles {
-  display: inline;
   font-size: 1.5rem;
   font-weight: 200;
-  width: max-content;
-  max-width: 90%;
   margin-block: 0;
   margin-inline: auto;
+  max-width: 80%;
+  height: 4rem;
 }
 
 #nav-container {
