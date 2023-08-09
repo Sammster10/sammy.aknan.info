@@ -2,12 +2,17 @@
 
 import {updateActiveLink} from "~/util/utils";
 
+const navTitle = ref("More Information");
+
+
 function togglePullout() {
   const pullout = document.getElementById("nav-pullout") as HTMLElement;
   if (pullout.classList.contains("open")) {
     pullout.classList.remove("open");
+    navTitle.value = "More Information";
   } else {
     pullout.classList.add("open");
+    navTitle.value = "Less Information";
   }
 }
 
@@ -60,7 +65,7 @@ onMounted(() => {
         </router-link>
       </div>
       <div class="bottom" @click="togglePullout">
-        <p>More Information</p>
+        <p>{{navTitle}}</p>
         <svg id="open-pullout-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
           <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -97,10 +102,15 @@ p, a {
 #open-pullout-icon {
   cursor: pointer;
   width: 3rem;
+  transition: transform 0.2s ease;
 }
 
 #nav-pullout.open {
   transform: translateY(0);
+}
+
+#nav-pullout.open #open-pullout-icon {
+  transform: rotate(-180deg);
 }
 
 .bottom {
