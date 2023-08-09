@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div>
+  <div class="txt-center">
     <h1>Under Construction!</h1>
     <h3>This page is still under construction, check back soon.</h3>
   </div>

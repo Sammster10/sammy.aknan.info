@@ -6,6 +6,7 @@
     --line-color: #727272;
 
     font-size: min(24px, 1.25vw);
+    scroll-behavior: smooth;
 }
 
 @media screen and (max-width: 768px) {
