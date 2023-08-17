@@ -2,6 +2,15 @@
 import Header from "~/components/Header.vue";
 import Footer from "~/components/Footer.vue";
 
+/* TODO:
+ * Improve README.md
+ * SEO - may not have to edit anything, but look into it
+ * Config the site to properly embed into twitter, Discord, Facebook etc...
+ * Extract SVGs into their own components
+ * Extract links to a reusable component
+ * Pull out portions of the destination cards for usability and to make the code more concise
+ */
+
 const elementsToFade: { [key: number]: object[] } = {};
 
 function slowScroll() {

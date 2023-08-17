@@ -83,9 +83,9 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="relative" id="header">
-    <div id="nav-background" class="desktop-only"/>
-    <div id="background" class="fast-scroll"/>
+  <div class="header">
+    <div class="nav-background desktop-only"/>
+    <div class="background fast-scroll"/>
     <NavPullout/>
     <div class="desktop-only">
       <div id="nav-container">
@@ -96,7 +96,7 @@ onMounted(() => {
               <hr>
             </div>
           </router-link>
-          <div class="row" id="links-right">
+          <div class="links-right">
             <router-link to="/" class="no-decoration">
               <div id="home-link" class="hover-scale">
                 Home
@@ -126,14 +126,14 @@ onMounted(() => {
       </div>
     </div>
 
-    <div id="profile" class="white letter-spacing-negative-05 txt-center width-100">
-      <div id="profile-pic" class="hover-scale fade-in" data-fade-after="0.8">
+    <div class="profile white letter-spacing-negative-05 txt-center width-100">
+      <div class="profile-pic hover-scale fade-in" data-fade-after="0.8">
         <img src="/image/profile.jpg" alt="profile image"/>
       </div>
       <div class="fade-in" data-fade-after="1.4">
         <p class="font-size-3 font-weight-700 width-max block-margin-0 inline-margin-auto hover-scale">Sammy<span
             class="font-size-1-5">&nbsp;</span>Aknan</p>
-        <div id="subtitles" class="hover-scale">
+        <div class="subtitles hover-scale">
           <div class="margin-0">{{ subtitle }}<span class="cursor-blink"/></div>
         </div>
       </div>
@@ -147,11 +147,12 @@ p, a {
   text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
 }
 
-#header {
+.header {
+  position: relative;
   min-height: 100vh;
 }
 
-#background {
+.background {
   position: absolute;
   background-image: url("/image/header-background.jpg");
   background-attachment: fixed;
@@ -163,7 +164,7 @@ p, a {
   z-index: 2;
 }
 
-#background::before {
+.background::before {
   content: "";
   position: absolute;
   background-color: rgba(100, 100, 100, 0.1);
@@ -171,7 +172,7 @@ p, a {
   width: 100%;
 }
 
-#subtitles {
+.subtitles {
   font-size: 1.5rem;
   font-weight: 200;
   margin-block: 0;
@@ -194,7 +195,7 @@ nav {
   z-index: 4;
 }
 
-#nav-background {
+.nav-background {
   background-color: rgba(0, 0, 0, 0.5);
   content: "";
   height: 1.75rem;
@@ -215,7 +216,7 @@ nav hr {
   transition: width 0.5s ease, border-width 0.5s ease;
 }
 
-#profile {
+.profile {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -223,7 +224,7 @@ nav hr {
   z-index: 3;
 }
 
-#profile-pic {
+.profile-pic {
   border-radius: 50%;
   border: 0.2rem solid white;
   aspect-ratio: 1 / 1;
@@ -233,11 +234,11 @@ nav hr {
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
 }
 
-#profile-pic img {
+.profile-pic img {
   width: 10rem;
 }
 
-#portfolio-link hr {
+.portfolio-link hr {
   margin-left: 0;
   margin-right: auto;
 }
@@ -247,7 +248,9 @@ nav hr {
   border-width: 0.04rem !important;
 }
 
-#links-right {
+.links-right {
+  display: flex;
+  flex-direction: row;
   justify-content: space-between;
   width: 50%;
   margin-left: auto;

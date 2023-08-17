@@ -32,7 +32,7 @@ onMounted(() => {
 <template>
   <div class="mobile-only no-select">
     <div id="nav-pullout">
-      <div id="links">
+      <div class="links">
         <router-link to="/portfolio" class="no-decoration">
           <div id="portfolio-link">
             Portfolio
@@ -66,7 +66,7 @@ onMounted(() => {
       </div>
       <div class="bottom" @click="togglePullout">
         <p>{{navTitle}}</p>
-        <svg id="open-pullout-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="open-pullout-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
           <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
           <g id="SVGRepo_iconCarrier">
@@ -99,18 +99,25 @@ p, a {
   z-index: 5;
 }
 
-#open-pullout-icon {
-  cursor: pointer;
-  width: 3rem;
-  transition: transform 0.2s ease;
-}
-
 #nav-pullout.open {
   transform: translateY(0);
 }
 
-#nav-pullout.open #open-pullout-icon {
+#nav-pullout.open .open-pullout-icon {
   transform: rotate(-180deg);
+}
+
+#nav-pullout div {
+  font-size: 1.25rem;
+  margin-block: 1rem;
+  margin-inline: 2rem;
+}
+
+
+.open-pullout-icon {
+  cursor: pointer;
+  width: 3rem;
+  transition: transform 0.2s ease;
 }
 
 .bottom {
@@ -133,12 +140,6 @@ p, a {
   font-weight: 500;
 }
 
-#nav-pullout div {
-  font-size: 1.25rem;
-  margin-block: 1rem;
-  margin-inline: 2rem;
-}
-
 .active hr {
   width: 70% !important;
   border-width: 0.04rem !important;
@@ -153,7 +154,7 @@ hr {
   transition: width 0.5s ease, border-width 0.5s ease;
 }
 
-#links div {
+.links div {
   width: max-content;
   height: 1.5rem;
 }

@@ -4,7 +4,7 @@ import config from "~/assets/config/config.json";
 
 <template>
   <footer>
-    <div id="socials">
+    <div class="socials">
       <!-- GitHub -->
       <a :href="config.socials.github" target="_blank">
         <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="white">
@@ -92,11 +92,11 @@ import config from "~/assets/config/config.json";
 
     </div>
 
-    <div id="links">
+    <div class="links">
       <router-link to="/contact">Contact</router-link>
       • <a :href="config.source_link">View Source Code</a>
     </div>
-    <div id="last-updated">
+    <div class="last-updated">
       Last Updated: {{ config.last_updated }}
     </div>
   </footer>
@@ -118,37 +118,37 @@ svg {
   padding: 0;
 }
 
-#socials {
+.socials {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#socials a {
+.socials a {
   margin: 0 0.5rem;
 }
 
-#socials a:hover {
+.socials a:hover {
   opacity: 0.7;
 }
 
-#links {
+.links {
   text-align: center;
   color: white;
   font-size: 0.7rem;
   margin-block: 0.5rem
 }
 
-#links a {
+.links a {
   color: white;
   text-decoration: none;
 }
 
-#links a:hover {
+.links a:hover {
   text-decoration: underline;
 }
 
-#last-updated {
+.last-updated {
   text-align: center;
   color: white;
   font-size: 0.7rem;
