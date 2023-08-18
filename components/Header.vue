@@ -183,6 +183,7 @@ p, a {
 
 #nav-container {
   position: fixed;
+  padding-top: 0.2rem;
   width: 100%;
   z-index: 4;
 }
@@ -198,7 +199,7 @@ nav {
 .nav-background {
   background-color: rgba(0, 0, 0, 0.5);
   content: "";
-  height: 1.75rem;
+  height: 2rem;
   position: fixed;
   width: 100%;
   z-index: 1;

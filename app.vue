@@ -3,15 +3,15 @@ import Header from "~/components/Header.vue";
 import Footer from "~/components/Footer.vue";
 
 /* TODO:
- * Improve README.md
- * SEO - may not have to edit anything, but look into it
- * Config the site to properly embed into twitter, Discord, Facebook etc...
- * Extract SVGs into their own components
- * Extract links to a reusable component
- * Pull out portions of the destination cards for usability and to make the code more concise
+    Improve README.md
+    SEO - may not have to edit anything, but look into it
+    Config the site to properly embed into twitter, Discord, Facebook etc...
+    Extract SVGs into their own components
+    Extract links to a reusable component
+    Pull out portions of the destination cards for usability and to make the code more concise
  */
 
-const elementsToFade: { [key: number]: object[] } = {};
+const elementsToFade: { [key: number]: HTMLElement[] } = {};
 
 function slowScroll() {
   scrollSpeed(0.2, "slow-scroll");
@@ -22,32 +22,31 @@ function fastScroll() {
 }
 
 function scrollSpeed(speed: number, className: string) {
-  let lastScrollTop = 0;
+  let lastDistFromTop = 0;
   window.addEventListener('scroll', function () {
-    const st = document.documentElement.scrollTop;
+    const distanceFromTop = document.documentElement.scrollTop;
 
     const elements: NodeListOf<HTMLElement> = document.querySelectorAll('.' + className);
 
-    if (st > lastScrollTop) {
+    if (distanceFromTop > lastDistFromTop) {
       // Scrolling down
       elements.forEach(element => {
-        element.style.backgroundPositionY = '-' + (st * speed) + 'px';
+        element.style.backgroundPositionY = '-' + (distanceFromTop * speed) + 'px';
       })
     } else {
       // Scrolling up
       elements.forEach(element => {
-        element.style.backgroundPositionY = '-' + (st * speed) + 'px';
+        element.style.backgroundPositionY = '-' + (distanceFromTop * speed) + 'px';
       })
     }
 
-    lastScrollTop = st;
+    lastDistFromTop = distanceFromTop;
   });
 }
 
 function getElementsToFade() {
-  const elements = document.querySelectorAll(".fade-in");
+  const elements = document.querySelectorAll(".fade-in") as NodeListOf<HTMLElement>;
   elements.forEach((element) => {
-    // @ts-ignore
     const fadeAfter = element.dataset.fadeAfter;
     if (fadeAfter) {
       const fadeAfterNum = parseFloat(fadeAfter);
@@ -67,7 +66,6 @@ function fadeElements() {
     Object.keys(elementsToFade).forEach(key => {
       if (parseFloat(key) <= totalFadeTime) {
         elementsToFade[parseFloat(key)].forEach(element => {
-          // @ts-ignore
           element.classList.add("show");
         });
         delete elementsToFade[parseFloat(key)];
