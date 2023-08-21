@@ -9,6 +9,10 @@ import Footer from "~/components/Footer.vue";
     Extract SVGs into their own components
     Extract links to a reusable component
     Pull out portions of the destination cards for usability and to make the code more concise
+    Portfolio page
+    About page
+    Services page
+    Contact page
  */
 
 const elementsToFade: { [key: number]: HTMLElement[] } = {};
