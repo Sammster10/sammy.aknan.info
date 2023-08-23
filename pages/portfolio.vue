@@ -128,7 +128,6 @@ import ServersPorfolio from "~/components/ServersPorfolio.vue";
 .intro {
   display: flex;
   position: relative;
-  overflow: hidden;
 }
 
 h2 {
@@ -152,7 +151,7 @@ img {
 .left-image {
   float: left;
   margin-right: 0.5rem;
-  height: 100%;
+  height: 101%;
   display: flex;
   align-items: flex-end;
   shape-outside: inset(calc(100% - 15rem) 0 0);
