@@ -41,7 +41,7 @@ import ExpandableImage from "~/components/ExpandableImage.vue";
     </div>
     <div class="item">
       <div class="description">
-        <h3>Addon: <span class="tooltip">MCBE<span class="tooltiptext">Minecraft Bedrock Edition</span></span> Builder Addo..<LinkIcon to="https://youtu.be/11iLLakames" /></h3>
+        <h3>Addon: <span class="tooltip">MCBE<span class="tooltiptext">Minecraft Bedrock Edition</span></span> Builder Addo..<LinkIcon to="https://youtu.be/0_ft-bVyJ8Q" /></h3>
         <hr>
         <p>I show viewers an free public addon that me and a friend made which will assist them in building.</p>
       </div>
