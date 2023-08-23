@@ -34,7 +34,7 @@ import ServersPorfolio from "~/components/ServersPorfolio.vue";
         <div class="intro">
           <p>
           <span class="left-image wide">
-            <img src="/portfolio/yt_thumbnail.jpg"
+            <img src="/portfolio/yt_perplayer.jpg"
                  alt="youtube thumbnail of minecraft tutorial video: how to make custom commands">
           </span>
             Over the years, I've created a catalog of tutorial-style YouTube videos in which I would teach people a

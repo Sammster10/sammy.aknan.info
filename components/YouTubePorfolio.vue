@@ -9,14 +9,45 @@ import ExpandableImage from "~/components/ExpandableImage.vue";
   <PortfolioDisplay>
     <div class="item">
       <div class="description">
-        <h3><span class="tooltip">MCJE<span class="tooltiptext">Minecraft Java Edition</span></span> Server: Prisons<LinkIcon to="/workinprogress"/>
-        </h3>
+        <h3>How To: <span class="tooltip">MCBE<span class="tooltiptext">Minecraft Bedrock Edition</span></span> Prison Mines<LinkIcon to="https://youtu.be/-hBCJksz_Vk" /></h3>
         <hr>
-        <p>Static Prisons was my latest Minecraft server. The main plugin was coded in Java, click <a
-            href="https://github.com/Sammster10/Static-Prisons-Season-2">here</a> to view the source code.</p>
+        <p>I show viewers a free public addon that I made which allows players to easily create and manage <span class="tooltip">MCBE<span class="tooltiptext">Minecraft Bedrock Edition</span></span> Prison mines.</p>
       </div>
-      <ExpandableImage src="/portfolio/prisons.webp"/>
+      <ExpandableImage src="/portfolio/yt_prisonmines.jpg"/>
     </div>
+    <div class="item">
+      <div class="description">
+        <h3>How To: Per-Player World..<LinkIcon to="https://youtu.be/TdLcXYWYjWY" /></h3>
+        <hr>
+        <p>I show viewers how to create per-player world borders using Java code for their Minecraft Servers.</p>
+      </div>
+      <ExpandableImage src="/portfolio/yt_perplayer.jpg"/>
+    </div>
+    <div class="item">
+      <div class="description">
+        <h3>How To: <span class="tooltip">MCBE<span class="tooltiptext">Minecraft Bedrock Edition</span></span> Custom Comm..<LinkIcon to="https://youtu.be/zWLrFTpUlgc" /></h3>
+        <hr>
+        <p>I teach viewers how to code their own custom commands. Additionally, I provide sample code available for download.</p>
+      </div>
+      <ExpandableImage src="/portfolio/yt_customcommands.jpg"/>
+    </div>
+    <div class="item">
+      <div class="description">
+        <h3>Addon: <span class="tooltip">MCBE<span class="tooltiptext">Minecraft Bedrock Edition</span></span> Gen Buckets<LinkIcon to="https://youtu.be/11iLLakames" /></h3>
+        <hr>
+        <p>I show viewers how to download and use an addon I made which creates Faction-style Gen Buckets.</p>
+      </div>
+      <ExpandableImage src="/portfolio/yt_genbuckets.jpg"/>
+    </div>
+    <div class="item">
+      <div class="description">
+        <h3>Addon: <span class="tooltip">MCBE<span class="tooltiptext">Minecraft Bedrock Edition</span></span> Builder Addo..<LinkIcon to="https://youtu.be/11iLLakames" /></h3>
+        <hr>
+        <p>I show viewers an free public addon that me and a friend made which will assist them in building.</p>
+      </div>
+      <ExpandableImage src="/portfolio/yt_builderblocks.jpg"/>
+    </div>
+
 
   </PortfolioDisplay>
 </template>
