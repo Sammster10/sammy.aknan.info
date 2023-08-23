@@ -21,32 +21,6 @@
   overflow-y: auto;
 }
 
-@media screen and (max-width: 768px) {
-  .interactive-portfolio {
-    position: relative;
-    height: 30rem;
-  }
-
-  :deep(p) {
-    font-size: 0.7rem;
-  }
-
-  :deep(h3) {
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .interactive-portfolio {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  }
-
-}
-
 .items {
   display: flex;
   flex-direction: column;
@@ -55,6 +29,7 @@
 }
 
 :deep(.item) {
+  position: relative;
   display: flex;
   flex-direction: row;
   padding: 0.5rem;
@@ -90,5 +65,46 @@
 
   margin: 0.5rem 0.5rem 0.5rem 0;
 }
+
+
+@media screen and (max-width: 768px) {
+  .interactive-portfolio {
+    position: relative;
+    height: 30rem;
+  }
+
+  :deep(p) {
+    font-size: 0.7rem;
+    padding: 0;
+
+    width: calc(100% - 6rem);
+  }
+
+  :deep(h3) {
+    font-size: 1rem;
+  }
+
+  :deep(img) {
+    position: absolute;
+    margin: 0;
+    top: 3.5rem;
+    right: 0.75rem;
+    width: 5.25rem;
+    height: 5.25rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .interactive-portfolio {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+}
+
+
 
 </style>

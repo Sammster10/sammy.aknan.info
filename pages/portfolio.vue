@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import config from "assets/config/portfolio.json";
 import PortfolioDisplay from "~/components/PortfolioDisplay.vue";
 import ServersPorfolio from "~/components/ServersPorfolio.vue";
 </script>
@@ -24,7 +23,7 @@ import ServersPorfolio from "~/components/ServersPorfolio.vue";
             connect and play on them. From using simple Minecraft commands, to using thirty thousand lines of Java code,
             each one of these servers was better than the last.</p>
         </div>
-        <ServersPorfolio/>
+        <LazyServersPorfolio/>
       </div>
 
       <hr>
@@ -44,7 +43,7 @@ import ServersPorfolio from "~/components/ServersPorfolio.vue";
             don't make as many YouTube videos anymore, all of my videos are still publicly viewable and act as a great
             resource to view my progress over time.</p>
         </div>
-        <PortfolioDisplay/>
+        <YouTubePorfolio/>
       </div>
 
       <hr>
