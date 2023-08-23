@@ -583,3 +583,33 @@ body {
 .width-clamp {
     max-width: var(--max-content-width);
 }
+
+.tooltip {
+    position: relative;
+    cursor: pointer;
+    font-style: italic;
+}
+
+.tooltiptext {
+    visibility: hidden;
+    width: 10rem;
+    font-size: 1rem;
+    font-weight: 500;
+    font-style: normal;
+    background-color: rgba(51, 51, 51, 0.9);
+    color: white;
+    text-align: center;
+    border-radius: 0.2rem;
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.2s, visibility 0.2s;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}

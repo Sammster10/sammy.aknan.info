@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import config from "assets/config/portfolio.json";
+import PortfolioDisplay from "~/components/PortfolioDisplay.vue";
+import ServersPorfolio from "~/components/ServersPorfolio.vue";
 </script>
 
 <template>
@@ -13,18 +15,36 @@ import config from "assets/config/portfolio.json";
 
         <div class="intro">
           <p>
-          <span class="left-image wide">
-            <img src="/portfolio/javacode.png"
-                 alt="minecraft marketplace image">
+          <span class="left-image square">
+            <img src="https://cdn.mos.cms.futurecdn.net/qjjeZPZT4MmqUgJHYFfwJF.jpg"
+                 alt="minecraft realms image">
           </span>
             By far, my history with Minecraft servers has had an enormous impact on where I am today. Over the course of
             many years, I created many servers/realms (too many to count) which have seen tens of thousands of players
             connect and play on them. From using simple Minecraft commands, to using thirty thousand lines of Java code,
             each one of these servers was better than the last.</p>
         </div>
-        <div class="interactive-portfolio">
-          <h1>I want users to be able to interact and explore my portfolio in this area. It will be scrollable</h1>
+        <ServersPorfolio/>
+      </div>
+
+      <hr>
+
+      <h2>YouTube Videos</h2>
+      <div class="section">
+
+        <div class="intro">
+          <p>
+          <span class="left-image wide">
+            <img src="/portfolio/yt_thumbnail.jpg"
+                 alt="youtube thumbnail of minecraft tutorial video: how to make custom commands">
+          </span>
+            Over the years, I've created a catalog of tutorial-style YouTube videos in which I would teach people a
+            programming concept, or simply show them how to complete a task. As I continued learning and my skill set
+            evolved, I tried to reflect that in my YouTube videos and teach my audience more complex topics. While I
+            don't make as many YouTube videos anymore, all of my videos are still publicly viewable and act as a great
+            resource to view my progress over time.</p>
         </div>
+        <PortfolioDisplay/>
       </div>
 
       <hr>
@@ -47,31 +67,7 @@ import config from "assets/config/portfolio.json";
             software developer after all so it only makes sense that I programmed these game-modes rather than drawing
             sprites for them.</p>
         </div>
-        <div class="interactive-portfolio">
-          <h1>I want users to be able to interact and explore my portfolio in this area. It will be scrollable</h1>
-        </div>
-      </div>
-
-      <hr>
-
-      <h2>YouTube Videos</h2>
-      <div class="section">
-
-        <div class="intro">
-          <p>
-          <span class="left-image wide">
-            <img src="/portfolio/yt_thumbnail.jpg"
-                 alt="youtube thumbnail of minecraft tutorial video: how to make custom commands">
-          </span>
-            Over the years, I've created a catalog of tutorial-style YouTube videos in which I would teach people a
-            programming concept, or simply show them how to complete a task. As I continued learning and my skill set
-            evolved, I tried to reflect that in my YouTube videos and teach my audience more complex topics. While I
-            don't make as many YouTube videos anymore, all of my videos are still publicly viewable and act as a great
-            resource to view my progress over time.</p>
-        </div>
-        <div class="interactive-portfolio">
-          <h1>I want users to be able to interact and explore my portfolio in this area. It will be scrollable</h1>
-        </div>
+        <PortfolioDisplay/>
       </div>
 
       <hr>
@@ -81,9 +77,9 @@ import config from "assets/config/portfolio.json";
 
         <div class="intro">
           <p>
-          <span class="left-image wide">
-            <img src="/portfolio/yt_thumbnail.jpg"
-                 alt="minecraft marketplace image">
+          <span class="left-image square">
+            <img src="/portfolio/web-dev.png"
+                 alt="people constructing a web page">
           </span>
             Web-development always seemed impossible to me - I suck at graphic design, but I loved the idea of creating
             interactive websites that thousands of people could use. I understood the potential that web-development had
@@ -92,9 +88,7 @@ import config from "assets/config/portfolio.json";
             it forces me to work super closely with my clients so that I can properly capture their vision rather than
             creating my own.</p>
         </div>
-        <div class="interactive-portfolio">
-          <h1>I want users to be able to interact and explore my portfolio in this area. It will be scrollable</h1>
-        </div>
+        <PortfolioDisplay/>
       </div>
 
       <hr>
@@ -104,15 +98,15 @@ import config from "assets/config/portfolio.json";
 
         <div class="intro">
           <p>
-          <span class="left-image wide">
-            <img src="/portfolio/yt_thumbnail.jpg"
-                 alt="minecraft marketplace image">
+          <span class="left-image square">
+            <img src="https://wallpaperaccess.com/full/3710385.jpg"
+                 alt="gears">
           </span>
-            As a developer, I have lots of side projects. Most of which aren't worth mentioning, but rather than creating a bunch of extra categories and making this page any longer than it needs to be, I've put together this collection of projects that I think are worth taking a look at.</p>
+            As a developer, I have lots of side projects. Most of which aren't worth mentioning, but rather than
+            creating a bunch of extra categories and making this page any longer than it needs to be, I've put together
+            this collection of projects that I think are worth taking a look at.</p>
         </div>
-        <div class="interactive-portfolio">
-          <h1>I want users to be able to interact and explore my portfolio in this area. It will be scrollable</h1>
-        </div>
+        <PortfolioDisplay/>
       </div>
 
       <hr>
@@ -151,6 +145,10 @@ h2 {
   margin: 0;
 }
 
+img {
+  border-radius: 0.5rem;
+}
+
 .left-image {
   float: left;
   margin-right: 0.5rem;
@@ -166,6 +164,16 @@ h2 {
 
 .wide img {
   height: 13rem !important;
+}
+
+.square img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  height: 14rem !important;
+}
+
+.square {
+  shape-outside: inset(calc(100% - 14rem) 0 0);
 }
 
 .left-image img {
@@ -193,6 +201,16 @@ h2 {
     height: 9rem !important;
   }
 
+  .square img {
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    height: 11rem !important;
+  }
+
+  .square {
+    shape-outside: inset(calc(100% - 11rem) 0 0) !important;
+  }
+
   .left-image {
     shape-outside: inset(calc(100% - 12rem) 0 0);
   }
@@ -209,10 +227,6 @@ hr {
   border-bottom: 0.2rem solid black;
   width: min(25rem, 50%);
 
-}
-
-.interactive-portfolio {
-  background-color: red;
 }
 
 </style>

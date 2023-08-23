@@ -15,6 +15,10 @@ export function updateActiveLink(parentId: string, path: string, oldActiveLink: 
         activeLink = "portfolio-link";
     }
 
+    if (!activeLink) {
+        return "";
+    }
+
     document.querySelector(`#${parentId} #${activeLink}`)?.classList.add("active");
 
     return activeLink;
