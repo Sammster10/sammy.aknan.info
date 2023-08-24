@@ -13,6 +13,7 @@ import Footer from "~/components/Footer.vue";
     About page
     Services page
     Contact page
+    Dark Theme
  */
 
 const elementsToFade: { [key: number]: HTMLElement[] } = {};

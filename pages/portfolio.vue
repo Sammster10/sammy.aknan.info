@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import PortfolioDisplay from "~/components/PortfolioDisplay.vue";
 import ServersPorfolio from "~/components/ServersPorfolio.vue";
+import WebDevPortfolio from "~/components/WebDevPortfolio.vue";
 </script>
 
 <template>
@@ -43,7 +44,28 @@ import ServersPorfolio from "~/components/ServersPorfolio.vue";
             don't make as many YouTube videos anymore, all of my videos are still publicly viewable and act as a great
             resource to view my progress over time.</p>
         </div>
-        <YouTubePorfolio/>
+        <LazyYouTubePorfolio/>
+      </div>
+
+      <hr>
+
+      <h2>Web-development</h2>
+      <div class="section">
+
+        <div class="intro">
+          <p>
+          <span class="left-image square">
+            <img src="/portfolio/web-dev.png"
+                 alt="people constructing a web page">
+          </span>
+            Web-development always seemed impossible to me - I suck at graphic design, but I loved the idea of creating
+            interactive websites that thousands of people could use. I understood the potential that web-development had
+            to offer, so I pushed myself to learn HTML & CSS as well as web-frameworks such as ReactJS and NuxtJS. As I
+            mentioned earlier, graphic design is not my area of experience. This isn't necessarily a bad thing however,
+            it forces me to work super closely with my clients so that I can properly capture their vision rather than
+            creating my own.</p>
+        </div>
+        <WebDevPortfolio/>
       </div>
 
       <hr>
@@ -65,27 +87,6 @@ import ServersPorfolio from "~/components/ServersPorfolio.vue";
             deciding what assets the project would need. Generally I worked on the more technical side of things - I'm a
             software developer after all so it only makes sense that I programmed these game-modes rather than drawing
             sprites for them.</p>
-        </div>
-        <PortfolioDisplay/>
-      </div>
-
-      <hr>
-
-      <h2>Web-development</h2>
-      <div class="section">
-
-        <div class="intro">
-          <p>
-          <span class="left-image square">
-            <img src="/portfolio/web-dev.png"
-                 alt="people constructing a web page">
-          </span>
-            Web-development always seemed impossible to me - I suck at graphic design, but I loved the idea of creating
-            interactive websites that thousands of people could use. I understood the potential that web-development had
-            to offer, so I pushed myself to learn HTML & CSS as well as web-frameworks such as ReactJS and NuxtJS. As I
-            mentioned earlier, graphic design is not my area of experience. This isn't necessarily a bad thing however,
-            it forces me to work super closely with my clients so that I can properly capture their vision rather than
-            creating my own.</p>
         </div>
         <PortfolioDisplay/>
       </div>

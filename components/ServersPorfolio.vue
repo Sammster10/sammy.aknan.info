@@ -20,7 +20,7 @@ import ExpandableImage from "~/components/ExpandableImage.vue";
     <div class="item">
       <div class="description">
         <h3><span class="tooltip">MCBE<span class="tooltiptext">Minecraft Bedrock Edition</span></span> <span
-            class="tooltip">Static Network<span class="tooltiptext">Static Network was development team behind the following MCBE Realms: Static SkyBlock, Static Factions, Static Prisons, and Static Kit PvP.</span></span><LinkIcon to="https://static-studios.net"/>
+            class="tooltip">Static Network<span class="tooltiptext">Static Network was the development team behind the following MCBE Realms: Static SkyBlock, Static Factions, Static Prisons, and Static Kit PvP.</span></span><LinkIcon to="https://static-studios.net"/>
         </h3>
         <hr>
         <p><span class="tooltip">MCBE<span class="tooltiptext">Minecraft Bedrock Edition</span></span>
