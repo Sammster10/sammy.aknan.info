@@ -7,9 +7,8 @@ import Footer from "~/components/Footer.vue";
     SEO - may not have to edit anything, but look into it
     Config the site to properly embed into twitter, Discord, Facebook etc...
     Extract SVGs into their own components
-    Extract links to a reusable component
+    Extract nav links to a reusable component
     Pull out portions of the destination cards for usability and to make the code more concise
-    Portfolio page
     About page
     Services page
     Contact page

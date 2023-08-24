@@ -52,17 +52,6 @@ import ExpandableImage from "~/components/ExpandableImage.vue";
     </div>
     <div class="item">
       <div class="description">
-        <h3><span class="tooltip">MCBE<span class="tooltiptext">Minecraft Bedrock Edition</span></span> Realm: Prisons<LinkIcon to="/workinprogress"/>
-        </h3>
-        <hr>
-        <p>Static Prisons ran for multiple years as an <span class="tooltip">MCBE<span class="tooltiptext">Minecraft Bedrock Edition</span></span>
-          Realm. It was coded with JavaScript, Minecraft commands and Molang.
-        </p>
-      </div>
-      <ExpandableImage src="/portfolio/mcbeprisons.webp"/>
-    </div>
-    <div class="item">
-      <div class="description">
         <h3><span class="tooltip">MCBE<span class="tooltiptext">Minecraft Bedrock Edition</span></span> Realm: Kit PvP<LinkIcon to="/workinprogress"/>
         </h3>
         <hr>
@@ -71,6 +60,17 @@ import ExpandableImage from "~/components/ExpandableImage.vue";
         </p>
       </div>
       <ExpandableImage src="/portfolio/kitpvp.webp"/>
+    </div>
+    <div class="item">
+      <div class="description">
+        <h3><span class="tooltip">MCBE<span class="tooltiptext">Minecraft Bedrock Edition</span></span> Realm: Prisons<LinkIcon to="/workinprogress"/>
+        </h3>
+        <hr>
+        <p>Static Prisons ran for multiple years as an <span class="tooltip">MCBE<span class="tooltiptext">Minecraft Bedrock Edition</span></span>
+          Realm. It was coded with JavaScript, Minecraft commands and Molang.
+        </p>
+      </div>
+      <ExpandableImage src="/portfolio/mcbeprisons.webp"/>
     </div>
 
   </PortfolioDisplay>

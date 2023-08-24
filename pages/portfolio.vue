@@ -65,7 +65,7 @@ import WebDevPortfolio from "~/components/WebDevPortfolio.vue";
             it forces me to work super closely with my clients so that I can properly capture their vision rather than
             creating my own.</p>
         </div>
-        <WebDevPortfolio/>
+        <LazyWebDevPortfolio/>
       </div>
 
       <hr>
@@ -88,7 +88,7 @@ import WebDevPortfolio from "~/components/WebDevPortfolio.vue";
             software developer after all so it only makes sense that I programmed these game-modes rather than drawing
             sprites for them.</p>
         </div>
-        <PortfolioDisplay/>
+        <LazyMarketPlacePortfolio/>
       </div>
 
       <hr>
@@ -106,7 +106,7 @@ import WebDevPortfolio from "~/components/WebDevPortfolio.vue";
             creating a bunch of extra categories and making this page any longer than it needs to be, I've put together
             this collection of projects that I think are worth taking a look at.</p>
         </div>
-        <PortfolioDisplay/>
+        <LazyMiscPortfolio/>
       </div>
 
       <hr>
