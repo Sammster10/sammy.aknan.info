@@ -16,7 +16,7 @@ defineProps({
   </div>
   <div class="destination">
     <div class="fade-in-on-screen">
-      <div class="container">
+      <div class="text-container">
         <slot/>
       </div>
     </div>
@@ -30,7 +30,7 @@ defineProps({
   justify-content: center;
 }
 
-.container {
+.text-container {
   padding-right: 4rem;
   padding-left: 3rem;
 }
