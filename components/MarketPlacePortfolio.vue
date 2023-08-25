@@ -15,6 +15,14 @@ import ExpandableImage from "~/components/ExpandableImage.vue";
       </div>
       <ExpandableImage src="/portfolio/skyblockblocksandbiomes.jpg"/>
     </div>
+    <div class="item">
+      <div class="description">
+        <h3>Capture The Flag <LinkIcon to="https://www.minecraft.net/en-us/marketplace/pdp?id=b91ac1f3-1b80-492d-9a50-9f7c26fe14ca" /></h3>
+        <hr>
+        <p>Two teams go head to head, trying to destroy one another, while protecting themselves. This is available for purchase.</p>
+      </div>
+      <ExpandableImage src="/portfolio/capturetheflag.webp"/>
+    </div>
 
 
   </PortfolioDisplay>
