@@ -78,7 +78,7 @@ hr {
   margin-block: 1rem;
   margin-inline: auto;
   border: none;
-  border-bottom: 0.2rem solid black;
+  border-bottom: 0.2rem solid var(--theme-inverse);
   width: min(25rem, 50%);
 }
 

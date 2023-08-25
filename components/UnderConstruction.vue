@@ -26,7 +26,7 @@ h1 {
 }
 
 h3 {
-  color: #424242;
+  color: var(--line-color);
   font-size: 1.2rem;
   font-weight: 400;
   margin: 0;

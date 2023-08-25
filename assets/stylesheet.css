@@ -3,10 +3,53 @@
 :root {
     font-family: 'Roboto Mono', monospace;
     --max-content-width: 1919px;
+
+    --theme-primary: white;
+    --theme-inverse: black;
+    --theme-inverse-10: rgba(0, 0, 0, 0.1);
+    --theme-inverse-20: rgba(0, 0, 0, 0.2);
+    --theme-inverse-30: rgba(0, 0, 0, 0.3);
+    --theme-inverse-50: rgba(0, 0, 0, 0.5);
+    --theme-inverse-70: rgba(0, 0, 0, 0.7);
     --line-color: #727272;
+    --footer-bg: #313131;
+    --page-bg: white;
+    --theme-offcolor: #f2f2f2;
+    --theme-app-bg: rgba(255, 255, 255, 0.85);
+    --link-color: #007bff;
+
+    color: var(--theme-inverse);
 
     font-size: min(24px, 1.25vw);
     scroll-behavior: smooth;
+}
+
+.dark-theme {
+    --theme-primary: black;
+    --theme-inverse: white;
+    --theme-inverse-10: rgba(255, 255, 255, 0.1);
+    --theme-inverse-20: rgba(255, 255, 255, 0.2);
+    --theme-inverse-30: rgba(255, 255, 255, 0.3);
+    --theme-inverse-50: rgba(255, 255, 255, 0.5);
+    --theme-inverse-70: rgba(255, 255, 255, 0.7);
+    --line-color: #ffffff;
+    --page-bg: #313131;
+    --theme-offcolor: #232323;
+    --theme-app-bg: rgba(16, 16, 16, 0.95);
+    --link-color: #69abff;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+hr {
+    border-color: var(--theme-inverse);
 }
 
 @media screen and (max-width: 768px) {
@@ -577,7 +620,7 @@ body {
 
 .no-decoration {
     text-decoration: none;
-    color: white;
+    color: var(--theme-inverse);
 }
 
 .width-clamp {

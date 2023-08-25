@@ -11,7 +11,6 @@ import Footer from "~/components/Footer.vue";
     Pull out portions of the destination cards for usability and to make the code more concise
     Services page
     Contact page
-    Dark Theme
  */
 
 const elementsToFade: { [key: number]: HTMLElement[] } = {};
@@ -115,6 +114,7 @@ onMounted(() => {
   <Header/>
   <NuxtPage/>
   <Footer/>
+  <ThemeButton />
 </template>
 
 <style scoped>
@@ -140,8 +140,7 @@ onMounted(() => {
   width: 100vw;
   min-height: 100%;
   aspect-ratio: 4447 / 6670;
-  background-color: #ffffff;
-  opacity: 0.9;
+  background-color: var(--theme-app-bg);
   z-index: -1;
 }
 </style>

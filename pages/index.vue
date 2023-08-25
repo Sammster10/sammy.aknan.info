@@ -79,7 +79,7 @@ onMounted(() => {
   left: 50%;
   width: 0.5rem;
   height: calc(100% - 10rem);
-  background-color: #727272;
+  background-color: var(--line-color);
 }
 
 .left {

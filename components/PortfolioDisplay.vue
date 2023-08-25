@@ -15,8 +15,8 @@
 
 <style scoped>
 .interactive-portfolio {
-  background-color: white;
-  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  background-color: var(--page-bg);
+  box-shadow: 0 0 1rem 0 var(--theme-inverse-20);
   padding: 0.5rem;
   overflow-y: auto;
 }
@@ -33,7 +33,7 @@
   display: flex;
   flex-direction: row;
   padding: 0.5rem;
-  background-color: #f2f2f2;
+  background-color: var(--theme-offcolor);
   height: 9rem;
 }
 
@@ -54,7 +54,7 @@
 :deep(hr) {
   width: 50%;
   margin: 0.5rem auto;
-  border: 0.07rem solid black;
+  border: 0.07rem solid var(--theme-inverse);
 }
 
 :deep(img) {

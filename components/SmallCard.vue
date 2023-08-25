@@ -36,9 +36,9 @@ defineProps({
 
 .card {
   position: relative;
-  background-color: white;
+  background-color: var(--page-bg);
   border-radius: 0.75rem;
-  box-shadow: 0.3rem 0.3rem 0.3rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0.3rem 0.3rem 0.3rem var(--theme-inverse-20);
   padding: 1rem;
   min-height: 16rem;
   max-height: 18rem;

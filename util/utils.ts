@@ -27,3 +27,26 @@ export function updateActiveLink(parentId: string, path: string, oldActiveLink: 
 export function isMobile(windowWidth: number) {
     return windowWidth < 768;
 }
+
+export function getTheme() {
+    return window.localStorage.getItem("theme") || "light";
+}
+
+export function setTheme(theme: string) {
+    window.localStorage.setItem("theme", theme);
+}
+
+export function toggleTheme() {
+    const theme = getTheme();
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+    return newTheme;
+}
+
+export function isLightTheme() {
+    return getTheme() === "light";
+}
+
+export function isDarkTheme() {
+    return getTheme() === "dark";
+}

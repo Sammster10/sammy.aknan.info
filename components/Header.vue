@@ -145,6 +145,7 @@ onMounted(() => {
 
 p, a {
   text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+  color: white
 }
 
 .header {
