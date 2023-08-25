@@ -6,7 +6,6 @@ import Footer from "~/components/Footer.vue";
     Improve README.md
     SEO - may not have to edit anything, but look into it
     Config the site to properly embed into twitter, Discord, Facebook etc...
-    Pull out portions of the destination cards for usability and to make the code more concise
     Services page
     Contact page
  */

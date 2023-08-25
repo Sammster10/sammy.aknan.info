@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import DestinationRight from "~/components/DestinationRight.vue";
 
 import roadmapConfig from "~/assets/config/roadmap.json";
 import {isMobile} from "~/util/utils";
 import SmallCard from "~/components/SmallCard.vue";
+import Destination from "~/components/Destination.vue";
 
 let leftCards = roadmapConfig.roadmap.filter((_, index) => index % 2 === 0);
 const rightCards = roadmapConfig.roadmap.filter((_, index) => index % 2 === 1);
@@ -43,26 +43,26 @@ onMounted(() => {
       <div class="row width-clamp inline-margin-auto">
         <div class="column">
           <div class="width-100" v-for="card in leftCards">
-            <DestinationLeft :date="card.date">
+            <Destination :date="card.date" :left="true">
               <Card :header="card.header" :img="card.image">
                 <p v-for="desc in card.description">
                   {{ desc }}
                 </p>
               </Card>
-            </DestinationLeft>
+            </Destination>
           </div>
         </div>
         <div class="column">
           <!-- spacer -->
           <div/>
           <div class="width-100" v-for="card in rightCards">
-            <DestinationRight :date="card.date">
+            <Destination :date="card.date" :left="false">
               <Card :header="card.header" :img="card.image">
                 <p v-for="desc in card.description">
                   {{ desc }}
                 </p>
               </Card>
-            </DestinationRight>
+            </Destination>
           </div>
 
         </div>
