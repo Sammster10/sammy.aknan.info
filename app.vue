@@ -4,10 +4,10 @@ import Footer from "~/components/Footer.vue";
 
 /* TODO:
     Improve README.md
-    SEO - may not have to edit anything, but look into it
     Config the site to properly embed into twitter, Discord, Facebook etc...
     Services page
     Contact page
+    Some of the content in the portfolio page should link back to individual pages detailing the content. eg servers
  */
 
 const elementsToFade: { [key: number]: HTMLElement[] } = {};

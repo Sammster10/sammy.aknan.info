@@ -1,9 +1,16 @@
 <script setup lang="ts">
-
+useHeadSafe({
+  title: "Sammy | WIP",
+  meta: [
+    {
+      name: "description",
+      content: "template page",
+    },
+  ],
+})
 </script>
 
 <template>
-  <title>Sammy | WIP</title>
   <div class="txt-center">
 
     <h1>Under Construction!</h1>

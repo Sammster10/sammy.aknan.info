@@ -1,9 +1,16 @@
 <script setup lang="ts">
-
+useHeadSafe({
+  title: "Sammy | About",
+  meta: [
+    {
+      name: "description",
+      content: "Information about Sammy Aknan.",
+    },
+  ],
+})
 </script>
 
 <template>
-  <title>Sammy | About</title>
 
   <BasicTextContent>
     <section>

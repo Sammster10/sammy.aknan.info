@@ -1,13 +1,17 @@
 <script setup lang="ts">
-import PortfolioDisplay from "~/components/PortfolioDisplay.vue";
-import ServersPorfolio from "~/components/ServersPorfolio.vue";
-import WebDevPortfolio from "~/components/WebDevPortfolio.vue";
+useHeadSafe({
+  title: "Sammy | Portfolio",
+  meta: [
+    {
+      name: "description",
+      content: "Sammy Aknan's portfolio.",
+    },
+  ],
+})
 import BasicTextContent from "~/components/BasicTextContent.vue";
 </script>
 
 <template>
-  <title>Sammy | Portfolio</title>
-
   <BasicTextContent>
     <h2>Minecraft Servers/Realms</h2>
     <div class="section">

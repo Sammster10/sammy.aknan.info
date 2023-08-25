@@ -1,4 +1,13 @@
 <script setup lang="ts">
+useHeadSafe({
+  title: "Sammy | GitHub",
+  meta: [
+    {
+      name: "description",
+      content: "Sammy Aknan's GitHub profile.",
+    },
+  ],
+})
 import config from "assets/config/config.json";
 
 const router = useRouter()

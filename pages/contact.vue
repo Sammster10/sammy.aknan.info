@@ -1,11 +1,18 @@
 <script setup lang="ts">
+useHeadSafe({
+  title: "Sammy | Contact",
+  meta: [
+    {
+      name: "description",
+      content: "Sammy Aknan's contact information."
+    },
+  ],
+})
 
 import UnderConstruction from "~/components/UnderConstruction.vue";
 </script>
 
 <template>
-  <title>Sammy | Contact</title>
-
   <UnderConstruction/>
 </template>
 

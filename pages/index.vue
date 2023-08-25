@@ -1,4 +1,13 @@
 <script setup lang="ts">
+useHeadSafe({
+  title: "Sammy | Home",
+  meta: [
+    {
+      name: "description",
+      content: "Sammy Aknan's portfolio website.",
+    },
+  ],
+})
 
 import roadmapConfig from "~/assets/config/roadmap.json";
 import {isMobile} from "~/util/utils";
@@ -20,7 +29,6 @@ onMounted(() => {
 </script>
 
 <template>
-  <title>Sammy | Home</title>
   <div class="relative">
     <div v-if="isMobile(windowWidth)" class="mobile-only">
       <div id="vertical-line" class="left"/>
