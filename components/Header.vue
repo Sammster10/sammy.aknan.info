@@ -103,7 +103,7 @@ onMounted(() => {
         <p class="font-size-3 font-weight-700 width-max block-margin-0 inline-margin-auto hover-scale">Sammy<span
             class="font-size-1-5">&nbsp;</span>Aknan</p>
         <div class="subtitles hover-scale">
-          <div class="margin-0">{{ subtitle }}<span class="cursor-blink"/></div>
+          <div class="margin-0 relative">{{ subtitle }}<span class="cursor-blink"/></div>
         </div>
       </div>
     </div>
@@ -217,12 +217,12 @@ nav :deep(.links-right) {
 }
 
 .cursor-blink {
+  position: absolute;
+  top: 0.25rem;
   animation: blink 1s step-start infinite;
   background-color: white;
-  display: inline-block;
   width: 0.1rem;
   margin-left: 0.2rem;
-  margin-bottom: 0;
   height: 1em;
   opacity: 1;
 }
