@@ -33,41 +33,10 @@ onMounted(() => {
 <template>
   <div class="mobile-only no-select">
     <div id="nav-pullout">
-      <div class="links">
-        <router-link to="/portfolio" class="no-decoration">
-          <div id="portfolio-link">
-            Portfolio
-            <hr>
-          </div>
-        </router-link>
-        <router-link to="/" class="no-decoration">
-          <div id="home-link">
-            Home
-            <hr>
-          </div>
-        </router-link>
-        <router-link to="/about" class="no-decoration">
-          <div id="about-link">
-            About
-            <hr>
-          </div>
-        </router-link>
-        <router-link to="/services" class="no-decoration">
-          <div id="services-link">
-            Services
-            <hr>
-          </div>
-        </router-link>
-        <router-link to="/contact" class="no-decoration">
-          <div id="contact-link">
-            Contact
-            <hr>
-          </div>
-        </router-link>
-      </div>
+      <NavLinkes/>
       <div class="bottom" @click="togglePullout">
-        <p>{{navTitle}}</p>
-        <ThreeLinesSVG class="open-pullout-icon" />
+        <p>{{ navTitle }}</p>
+        <ThreeLinesSVG class="open-pullout-icon"/>
       </div>
     </div>
   </div>
@@ -101,7 +70,7 @@ p, a {
   transform: rotate(-180deg);
 }
 
-#nav-pullout div {
+:deep(.link) {
   font-size: 1.25rem;
   margin-block: 1rem;
   margin-inline: 2rem;
@@ -134,21 +103,7 @@ p, a {
   font-weight: 500;
 }
 
-.active hr {
-  width: 70% !important;
-  border-width: 0.04rem !important;
-}
-
-hr {
-  margin-top: 0;
-  border: 0 solid white;
-  width: 0;
-  margin-left: 0;
-  margin-right: auto;
-  transition: width 0.5s ease, border-width 0.5s ease;
-}
-
-.links div {
+:deep(.link) {
   width: max-content;
   height: 1.5rem;
 }

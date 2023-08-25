@@ -41,13 +41,7 @@
 
 a {
     color: var(--link-color);
-    text-decoration: none;
 }
-
-a:hover {
-    text-decoration: underline;
-}
-
 hr {
     border-color: var(--theme-inverse);
 }
