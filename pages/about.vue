@@ -56,7 +56,7 @@ useHeadSafe({
     </section>
 
     <section>
-      <h2>My Skill:</h2>
+      <h2>My Skills:</h2>
       <hr>
       <p>I have experience with multiple: programming languages, operating systems and command line interfaces,
         programming frameworks, developer tools, and more. You can find a list which details my skill set below.</p>
@@ -81,18 +81,6 @@ useHeadSafe({
 </template>
 
 <style scoped>
-hr {
-  margin-block: 1rem;
-  margin-inline: auto;
-  border: none;
-  border-bottom: 0.2rem solid var(--theme-inverse);
-  width: min(25rem, 50%);
-}
-
-section {
-  text-align: center;
-  padding-inline: 6rem;
-}
 
 ul {
   margin-top: 0;
@@ -100,16 +88,6 @@ ul {
 
 h4 {
   margin-bottom: 0;
-}
-
-@media screen and (max-width: 768px) {
-  section {
-    padding-inline: 2rem;
-  }
-}
-
-section:not(:last-child) {
-  margin-bottom: 5rem;
 }
 
 </style>
