@@ -89,42 +89,8 @@ onMounted(() => {
     <NavPullout/>
     <div class="desktop-only">
       <div id="nav-container">
-<!--        <nav class="fade-in" data-fade-after="0.4">-->
-<!--          <router-link to="/portfolio" class="no-decoration">-->
-<!--            <div id="portfolio-link" class="hover-scale">-->
-<!--              Portfolio-->
-<!--              <hr>-->
-<!--            </div>-->
-<!--          </router-link>-->
-<!--          <div class="links-right">-->
-<!--            <router-link to="/" class="no-decoration">-->
-<!--              <div id="home-link" class="hover-scale">-->
-<!--                Home-->
-<!--                <hr>-->
-<!--              </div>-->
-<!--            </router-link>-->
-<!--            <router-link to="/about" class="no-decoration">-->
-<!--              <div id="about-link" class="hover-scale">-->
-<!--                About-->
-<!--                <hr>-->
-<!--              </div>-->
-<!--            </router-link>-->
-<!--            <router-link to="/services" class="no-decoration">-->
-<!--              <div id="services-link" class="hover-scale">-->
-<!--                Services-->
-<!--                <hr>-->
-<!--              </div>-->
-<!--            </router-link>-->
-<!--            <router-link to="/contact" class="no-decoration">-->
-<!--              <div id="contact-link" class="hover-scale">-->
-<!--                Contact-->
-<!--                <hr>-->
-<!--              </div>-->
-<!--            </router-link>-->
-<!--          </div>-->
-<!--        </nav>-->
         <nav>
-          <NavLinkes/>
+          <NavLinks/>
         </nav>
       </div>
     </div>

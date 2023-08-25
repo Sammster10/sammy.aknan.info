@@ -33,7 +33,7 @@ onMounted(() => {
 <template>
   <div class="mobile-only no-select">
     <div id="nav-pullout">
-      <NavLinkes/>
+      <NavLinks/>
       <div class="bottom" @click="togglePullout">
         <p>{{ navTitle }}</p>
         <ThreeLinesSVG class="open-pullout-icon"/>
