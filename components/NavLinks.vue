@@ -41,6 +41,10 @@
 </template>
 
 <style scoped>
+
+a {
+  color: white;
+}
 hr {
   margin-top: 0;
   border: 0 solid white;
