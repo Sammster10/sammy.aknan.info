@@ -30,7 +30,7 @@ useHeadSafe({
     </section>
 
     <section>
-      <h2>My History With Minecraft:</h2>
+      <h2>My History With Minecraft</h2>
       <hr>
       <p>If you've taken a brief moment to take a look at my portfolio, you'll notice that <b>a lot</b> of my experience
         comes from the video game Minecraft. From the moment that I first learned about Minecraft command blocks I was
@@ -55,8 +55,8 @@ useHeadSafe({
       </p>
     </section>
 
-    <section>
-      <h2>My Skills:</h2>
+    <section id="skills">
+      <h2>My Skill Set</h2>
       <hr>
       <p>I have experience with multiple: programming languages, operating systems and command line interfaces,
         programming frameworks, developer tools, and more. You can find a list which details my skill set below.</p>
