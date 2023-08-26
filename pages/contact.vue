@@ -30,7 +30,7 @@ useHeadSafe({
       <hr>
       <p>
         If you would like to get in contact with me for business inquiries, please send me an email at
-        <a href="mailto:sammy.aknan@gmail.com">sammy.aknan@gmail.com</a> I will try my best to respond in a timely manner (within 48 hours).
+        <a href="mailto:sammy@aknan.info">sammy.aknan@gmail.com</a> I will try my best to respond in a timely manner (within 48 hours).
       </p>
     </section>
   </BasicTextContent>
