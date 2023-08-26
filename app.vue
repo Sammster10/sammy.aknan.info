@@ -3,7 +3,6 @@ import Header from "~/components/Header.vue";
 import Footer from "~/components/Footer.vue";
 
 /* TODO:
-    Improve README.md
     Some of the content in the portfolio page should link back to individual pages detailing the content. eg servers
  */
 useHead({
