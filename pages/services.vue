@@ -16,7 +16,7 @@ useHeadSafe({
       <h2>What Can I Do For You?</h2>
       <hr>
       <p>
-        If you haven't already, take a look at what I'm capable of on my <router-link to="/about#skills">about page</router-link>.
+        If you haven't already, take a look at what I'm capable of on my <router-link to="/about#skills">about</router-link> page.
         I'm usually available for hire, so if you're interested in working with me, feel free to reach out. Whether you're looking
         to get a small website made for your company/organization, or you're looking to get a full-stack application made, I'm
         your guy!
