@@ -28,10 +28,8 @@ useHeadSafe({
       <p>
         I have experience with a handful of frontend frameworks, but I typically work with NuxtJS. If you're looking to get a
         website made, I can do that for you! I can create a website for your company/organization, or I can create a website for
-        personal use. If you're in need of a website, don't hesitate to <router-link to="/contact">contact</router-link> me. Please note that I am
-        not a graphic designer, nor am I a UI/UX designer. I can create a functional website for you, but I cannot guarantee that
-        I will be able to create a design from scratch. If you already have a design in mind, I can work with that. If not, then
-        let's work on it together!
+        personal use. If you're in need of a website, don't hesitate to <router-link to="/contact">contact</router-link> me. I love
+        working closely with my clients to ensure that I capture their vision, I'd love to build upon your ideas and turn them into a reality!
       </p>
     </section>
     <section>
