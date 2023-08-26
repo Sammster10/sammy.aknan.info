@@ -4,9 +4,29 @@ import Footer from "~/components/Footer.vue";
 
 /* TODO:
     Improve README.md
-    Config the site to properly embed into twitter, Discord, Facebook etc...
     Some of the content in the portfolio page should link back to individual pages detailing the content. eg servers
  */
+useHead({
+  meta: [
+    {
+      name: "og:title",
+      content: "Sammy Aknan's Portfolio"
+    },
+    {
+      name: "og:image",
+      content: "/image/profile.jpg"
+    },
+    {
+      name: "og:description",
+      content: "Sammy Aknan's Portfolio - Software Developer; CS Major at Virginia Tech."
+    },
+    {
+      name: "keywords",
+      content: "sammy, aknan, sam, software developer, web-dev, web development, minecraft, plugin, developer, java, javascript, typescript, nuxt, vue, node, discord, bot, youtube, video, tutorial, portfolio, vt, virginia tech"
+    },
+  ]
+})
+
 
 const elementsToFade: { [key: number]: HTMLElement[] } = {};
 
