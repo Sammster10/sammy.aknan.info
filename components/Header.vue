@@ -85,7 +85,16 @@ onMounted(() => {
 <template>
   <div class="header">
     <div class="nav-background desktop-only"/>
-    <div class="background fast-scroll"/>
+    <div class="desktop-only">
+      <div class="absolute width-100 height-100">
+        <div class="background fast-scroll"/>
+      </div>
+    </div>
+    <div class="mobile-only">
+      <div class="absolute width-100 height-100">
+        <div class="background"/>
+      </div>
+    </div>
     <NavPullout/>
     <div class="desktop-only">
       <div id="nav-container">
@@ -103,7 +112,7 @@ onMounted(() => {
         <p class="font-size-3 font-weight-700 width-max block-margin-0 inline-margin-auto hover-scale">Sammy<span
             class="font-size-1-5">&nbsp;</span>Aknan</p>
         <div class="subtitles hover-scale">
-          <div class="margin-0 relative">{{ subtitle }}<span class="cursor-blink"/></div>
+          <div class="subtitle margin-0 relative">{{ subtitle }}<span class="cursor-blink"/></div>
         </div>
       </div>
     </div>
@@ -123,14 +132,14 @@ p, a {
 }
 
 .background {
-  position: absolute;
+  position: relative;
   background-image: url("/image/header-background.jpg");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
-  height: 100%;
   width: 100%;
+  height: 100%;
   z-index: 2;
 }
 
@@ -218,7 +227,7 @@ nav :deep(.links-right) {
 
 .cursor-blink {
   position: absolute;
-  top: 0.25rem;
+  bottom: 0.25rem;
   animation: blink 1s step-start infinite;
   background-color: white;
   width: 0.1rem;
@@ -227,9 +236,19 @@ nav :deep(.links-right) {
   opacity: 1;
 }
 
+.subtitle {
+  min-height: 2rem;
+}
+
 @keyframes blink {
   50% {
     opacity: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .background {
+    background-attachment: scroll;
   }
 }
 
