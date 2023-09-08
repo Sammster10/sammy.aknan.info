@@ -9,11 +9,11 @@
 
     <div class="container">
       <p class="desktop-only">
-        My complete portfolio can be viewed <router-link to="/portfolio">here</router-link>. It consists of various projects, ranging from <b>game development,
-        web development, content creation, and more.</b> I prefer to work on projects that
+        My complete portfolio can be viewed <router-link to="/portfolio">here</router-link>. It consists of various projects, ranging from <b>game
         <span class="image">
             <span class="img"/>
           </span>
+        development, web development, content creation, and more.</b> I prefer to work on projects that
         challenge me and allow me to learn new things. My language of
         choice is Java, mostly because how it integrates with <b>Minecraft</b> - which you'll notice is a common theme in my projects.
         I've also included a roadmap of how I got to where I am today below. I hope you enjoy!

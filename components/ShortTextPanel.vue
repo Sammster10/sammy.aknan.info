@@ -13,7 +13,7 @@
 <style scoped>
 .text-container {
   background-color: var(--page-bg);
-  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0.5rem 0 var(--theme-inverse-50);
   margin: 2rem;
   padding: 0.5rem;
 
