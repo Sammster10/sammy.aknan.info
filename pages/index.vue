@@ -14,10 +14,13 @@ useHeadSafe({
 
 <template>
   <PortfolioPreview/>
+  <div class="spacer" />
   <Roadmap/>
 </template>
 
 <style scoped>
-
+.spacer {
+  height: 3rem;
+}
 
 </style>

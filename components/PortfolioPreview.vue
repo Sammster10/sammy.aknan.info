@@ -4,7 +4,7 @@
 
 <template>
   <ShortTextPanel>
-    <h1 class="letter-spacing-negative-05 txt-center">My Portfolio<LinkIcon to="/portfolio"/></h1>
+    <h1 class="margin-1 letter-spacing-negative-05 txt-center">My Portfolio<LinkIcon to="/portfolio"/></h1>
     <hr>
 
     <div class="container">
