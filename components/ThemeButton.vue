@@ -54,6 +54,7 @@ svg {
   background-color: white;
   border-radius: 50%;
   box-shadow: 0 0 0.5rem 0 var(--theme-inverse);
+  overflow: visible;
 }
 
 .active {
@@ -63,5 +64,12 @@ svg {
 .dark {
   background-color: #424242;
   stroke: white;
+}
+
+@supports ( -webkit-touch-callout : none) {
+  #theme-button {
+    padding: 1rem;
+    margin: -1rem;
+  }
 }
 </style>
