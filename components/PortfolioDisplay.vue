@@ -39,7 +39,7 @@
 
 :deep(.description) {
   text-align: center;
-  width: calc(100% - 9rem);
+  width: calc(100% - 8rem);
 }
 
 :deep(h3) {
@@ -74,7 +74,7 @@
   }
 
   :deep(p) {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     padding: 0;
 
     width: calc(100% - 6rem);
