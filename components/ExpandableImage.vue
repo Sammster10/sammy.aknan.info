@@ -31,11 +31,11 @@ onBeforeMount(() => {
 </script>
 
 <template>
-  <img class="expandable-image" :src="src" @click="setSelectedImage(src)" v-if="!isImageSelected()" alt="" />
+  <NuxtImg format="webp" quality="80" class="expandable-image" :src="src" @click="setSelectedImage(src)" v-if="!isImageSelected()" alt="" />
 
   <div class="image-overlay" v-if="isImageSelected()" @click="clearSelectedImage()">
     <div class="image-container">
-      <img :src="selectedImage" alt=""/>
+      <NuxtImg format="webp" quality="80" :src="selectedImage" alt=""/>
     </div>
   </div>
 </template>

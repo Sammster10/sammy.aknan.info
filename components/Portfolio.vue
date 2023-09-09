@@ -14,8 +14,8 @@
       <div class="intro">
         <p>
           <span class="left-image square">
-            <img src="https://cdn.mos.cms.futurecdn.net/qjjeZPZT4MmqUgJHYFfwJF.jpg"
-                 alt="minecraft realms image">
+            <NuxtImg format="webp" quality="80" src="https://cdn.mos.cms.futurecdn.net/qjjeZPZT4MmqUgJHYFfwJF.jpg"
+                 alt="minecraft realms image"/>
           </span>
           By far, my history with Minecraft servers has had an enormous impact on where I am today. Over the course of
           many years, I created many servers/realms (too many to count) which have seen tens of thousands of players
@@ -33,8 +33,8 @@
       <div class="intro">
         <p>
           <span class="left-image wide">
-            <img src="/portfolio/yt_perplayer.jpg"
-                 alt="youtube thumbnail of minecraft tutorial video: how to make custom commands">
+            <NuxtImg format="webp" quality="80" src="/portfolio/yt_perplayer.jpg"
+                 alt="youtube thumbnail of minecraft tutorial video: how to make custom commands"/>
           </span>
           Over the years, I've created a catalog of tutorial-style YouTube videos in which I would teach people a
           programming concept, or simply show them how to complete a task. As I continued learning and my skill set
@@ -53,8 +53,8 @@
       <div class="intro">
         <p>
           <span class="left-image square">
-            <img src="/portfolio/web-dev.png"
-                 alt="people constructing a web page">
+            <NuxtImg format="webp" quality="80" src="/portfolio/web-dev.png"
+                 alt="people constructing a web page"/>
           </span>
           Web-development always seemed impossible to me - I suck at graphic design, but I loved the idea of creating
           interactive websites that thousands of people could use. I understood the potential that web-development had
@@ -73,8 +73,8 @@
       <div class="intro">
         <p>
           <span class="left-image">
-            <img src="https://www.minecraft.net/content/dam/games/minecraft/marketplace/mediablock1.png"
-                 alt="minecraft marketplace image">
+            <NuxtImg format="webp" quality="80" src="https://www.minecraft.net/content/dam/games/minecraft/marketplace/mediablock1.png"
+                 alt="minecraft marketplace image"/>
           </span>
           The Minecraft Marketplace is a service that both individuals and large organizations can apply for in order
           to sell Minecraft content (skins, worlds, textures, etc...) directly to customers via Minecraft's built in
@@ -97,8 +97,8 @@
       <div class="intro">
         <p>
           <span class="left-image square">
-            <img src="https://wallpaperaccess.com/full/3710385.jpg"
-                 alt="gears">
+            <NuxtImg format="webp" quality="80" src="https://wallpaperaccess.com/full/3710385.jpg"
+                 alt="gears"/>
           </span>
           As a developer, I have lots of side projects. Most of which aren't worth mentioning, but rather than
           creating a bunch of extra categories and making this page any longer than it needs to be, I've put together
