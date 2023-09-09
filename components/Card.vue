@@ -20,7 +20,7 @@ defineProps({
       <slot></slot>
     </div>
     <div class="card-image">
-      <NuxtImg format="webp" quality="80" v-if="img" :src="img" alt="..."/>
+      <img v-if="img" :src="img" alt="...">
     </div>
   </div>
 </template>

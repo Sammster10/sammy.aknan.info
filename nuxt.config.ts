@@ -3,7 +3,6 @@ export default defineNuxtConfig({// @ts-ignore
     css: ['~/assets/stylesheet.css'],
 
     modules: [
-        '@nuxtjs/robots',
-        '@nuxt/image',
+        '@nuxtjs/robots'
         ]
 })

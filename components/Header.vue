@@ -106,7 +106,7 @@ onMounted(() => {
 
     <div class="profile white letter-spacing-negative-05 txt-center width-100">
       <div class="profile-pic hover-scale fade-in" data-fade-after="0.8">
-        <NuxtImg format="webp" quality="80" src="/image/profile.jpg" alt="profile image"/>
+        <img src="/image/profile.jpg" alt="profile image"/>
       </div>
       <div class="fade-in" data-fade-after="1.4">
         <p class="font-size-3 font-weight-700 width-max block-margin-0 inline-margin-auto hover-scale">Sammy<span
