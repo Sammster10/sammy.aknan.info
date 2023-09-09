@@ -7,21 +7,21 @@
     <h1 class="margin-0 letter-spacing-negative-05">My Portfolio:</h1>
   </RectangularCard>
 
-  <BasicTextContent>
+  <BasicTextContent class="mobile-only">
     <h2>Minecraft Servers/Realms</h2>
     <div class="section">
 
       <div class="intro">
         <p>
-          <span class="left-image square">
-            <img src="https://cdn.mos.cms.futurecdn.net/qjjeZPZT4MmqUgJHYFfwJF.jpg"
-                 loading="lazy"
-                 alt="minecraft realms image">
-          </span>
           By far, my history with Minecraft servers has had an enormous impact on where I am today. Over the course of
           many years, I created many servers/realms (too many to count) which have seen tens of thousands of players
-          connect and play on them. From using simple Minecraft commands, to using thirty thousand lines of Java code,
-          each one of these servers was better than the last.</p>
+          connect and play on them. From using simple Minecraft commands,
+          <img class="square" src="https://cdn.mos.cms.futurecdn.net/qjjeZPZT4MmqUgJHYFfwJF.jpg"
+               loading="lazy"
+               alt="minecraft realms image">
+          to using thirty thousand lines of Java code,
+          each one of these servers was better than the last.
+        </p>
       </div>
       <LazyServersPorfolio/>
     </div>
@@ -33,16 +33,15 @@
 
       <div class="intro">
         <p>
-          <span class="left-image wide">
-            <img src="/portfolio/yt_perplayer.jpg"
-                 loading="lazy"
-                 alt="youtube thumbnail of minecraft tutorial video: how to make custom commands">
-          </span>
           Over the years, I've created a catalog of tutorial-style YouTube videos in which I would teach people a
           programming concept, or simply show them how to complete a task. As I continued learning and my skill set
           evolved, I tried to reflect that in my YouTube videos and teach my audience more complex topics. While I
-          don't make as many YouTube videos anymore, all of my videos are still publicly viewable and act as a great
-          resource to view my progress over time.</p>
+          don't make as many YouTube videos anymore, all of my videos are still publicly viewable and
+          <img class="wide" src="/portfolio/yt_perplayer.jpg"
+               loading="lazy"
+               alt="minecraft realms image">
+          act as a great resource to view my progress over time.
+        </p>
       </div>
       <LazyYouTubePorfolio/>
     </div>
@@ -54,16 +53,15 @@
 
       <div class="intro">
         <p>
-          <span class="left-image square">
-            <img src="/portfolio/web-dev.png"
-                 loading="lazy"
-                 alt="people constructing a web page">
-          </span>
           Web-development always seemed impossible to me - I suck at graphic design, but I loved the idea of creating
           interactive websites that thousands of people could use. I understood the potential that web-development had
           to offer, so I pushed myself to learn HTML & CSS as well as web-frameworks such as ReactJS and NuxtJS. As I
-          mentioned earlier, graphic design is not my area of experience. This isn't necessarily a bad thing however,
-          it forces me to work super closely with my clients so that I can properly capture their vision rather than
+          mentioned earlier, graphic design is not my area of experience.
+          This isn't necessarily a bad thing however, it forces me to work super
+          <img class="square" src="/portfolio/web-dev.png"
+               loading="lazy"
+               alt="people constructing a web page">
+          closely with my clients so that I can properly capture their vision rather than
           creating my own.</p>
       </div>
       <LazyWebDevPortfolio/>
@@ -75,11 +73,6 @@
     <div class="section">
       <div class="intro">
         <p>
-          <span class="left-image">
-            <img src="https://www.minecraft.net/content/dam/games/minecraft/marketplace/mediablock1.png"
-                 loading="lazy"
-                 alt="minecraft marketplace image">
-          </span>
           The Minecraft Marketplace is a service that both individuals and large organizations can apply for in order
           to sell Minecraft content (skins, worlds, textures, etc...) directly to customers via Minecraft's built in
           store. I've been part of a few small teams where I have collaborated with others to create fully interactive
@@ -87,7 +80,11 @@
           the
           project lead; I came up with the various feature sets that would be implemented into the game as well as
           deciding what assets the project would need. Generally I worked on the more technical side of things - I'm a
-          software developer after all so it only makes sense that I programmed these game-modes rather than drawing
+          software developer after all so it only makes sense that
+          <img src="https://www.minecraft.net/content/dam/games/minecraft/marketplace/mediablock1.png"
+               loading="lazy"
+               alt="minecraft marketplace image">
+          I programmed these game-modes rather than drawing
           sprites for them.</p>
       </div>
       <LazyMarketPlacePortfolio/>
@@ -100,14 +97,127 @@
 
       <div class="intro">
         <p>
-          <span class="left-image square">
-            <img src="https://wallpaperaccess.com/full/3710385.jpg"
-                 loading="lazy"
-                 alt="gears">
-          </span>
           As a developer, I have lots of side projects. Most of which aren't worth mentioning, but rather than
-          creating a bunch of extra categories and making this page any longer than it needs to be, I've put together
-          this collection of projects that I think are worth taking a look at.</p>
+          creating a bunch of extra categories and making this page any longer than
+          <img class="square" src="https://wallpaperaccess.com/full/3710385.jpg"
+               loading="lazy"
+               alt="gears">
+          it needs to be, I've put together
+          this collection of projects that I think are worth taking a look at.
+        </p>
+      </div>
+      <LazyMiscPortfolio/>
+    </div>
+
+    <hr>
+
+  </BasicTextContent>
+
+  <BasicTextContent class="desktop-only">
+    <h2>Minecraft Servers/Realms</h2>
+    <div class="section">
+
+      <div class="intro">
+        <p>
+          By far, my history with Minecraft servers has had an enormous impact on where I am today. Over the course of
+          many years, I created many servers/realms (too many to count)
+          <img class="square" src="https://cdn.mos.cms.futurecdn.net/qjjeZPZT4MmqUgJHYFfwJF.jpg"
+               loading="lazy"
+               alt="minecraft realms image">
+          which have seen tens of thousands of players
+          connect and play on them. From using simple Minecraft commands,
+          to using thirty thousand lines of Java code,
+          each one of these servers was better than the last.
+        </p>
+      </div>
+      <LazyServersPorfolio/>
+    </div>
+
+    <hr>
+
+    <h2>YouTube Videos</h2>
+    <div class="section">
+
+      <div class="intro">
+        <p>
+          Over the years, I've created a catalog of tutorial-style YouTube videos in which I would teach people a
+          programming concept, or simply show them how to complete a task. As I continued learning and my skill set
+          evolved, I tried to reflect that in my YouTube videos and teach my audience more complex topics. While I
+          don't make as many YouTube videos anymore, all
+
+          <img class="wide" src="/portfolio/yt_perplayer.jpg"
+               loading="lazy"
+               alt="minecraft realms image">
+          of my videos are still publicly viewable and
+          act as a great resource to view my progress over time.
+        </p>
+      </div>
+      <LazyYouTubePorfolio/>
+    </div>
+
+    <hr>
+
+    <h2>Web-development</h2>
+    <div class="section">
+
+      <div class="intro">
+        <p>
+          Web-development always seemed impossible to me - I suck at graphic design, but I loved the idea of creating
+          interactive websites that thousands of people could use. I understood the potential that web-development had
+          to offer, so I pushed myself to learn HTML & CSS as well as web-frameworks such as ReactJS and NuxtJS. As I
+          mentioned earlier, graphic design is not my
+          <img class="square" src="/portfolio/web-dev.png"
+               loading="lazy"
+               alt="people constructing a web page">
+          area of experience.
+          This isn't necessarily a bad thing however, it forces me to work super
+          closely with my clients so that I can properly capture their vision rather than
+          creating my own.</p>
+      </div>
+      <LazyWebDevPortfolio/>
+    </div>
+
+    <hr>
+
+    <h2>Minecraft Marketplace Content</h2>
+    <div class="section">
+      <div class="intro">
+        <p>
+          The Minecraft Marketplace is a service that both individuals and large organizations can apply for in order
+          to sell Minecraft content (skins, worlds, textures, etc...) directly to customers via Minecraft's built in
+          store. I've been part of a few small teams where I have collaborated with others to create fully interactive
+          game-modes that were later published on the Minecraft Marketplace. For about half of these projects, I was
+          the
+          project lead; I came up with the various feature sets that would be implemented into the game as well as
+          deciding what assets the
+          <img src="https://www.minecraft.net/content/dam/games/minecraft/marketplace/mediablock1.png"
+               loading="lazy"
+               alt="minecraft marketplace image">
+          project would need.
+          Generally I worked on the more technical side of things - I'm a
+          software developer after all so it only makes sense that
+          I programmed these game-modes rather than drawing
+          sprites for them.</p>
+      </div>
+      <LazyMarketPlacePortfolio/>
+    </div>
+
+    <hr>
+
+    <h2>Miscellaneous Projects</h2>
+    <div class="section">
+
+      <div class="intro">
+        <p>
+          As a developer, I have lots of side projects. Most of which aren't worth mentioning, but rather than
+
+          <img class="square" src="https://wallpaperaccess.com/full/3710385.jpg"
+               loading="lazy"
+               alt="gears">
+          creating a bunch of extra categories and making this page any longer than
+          it needs to be, I've put together
+          this collection of projects that I think are worth taking a look at.
+        </p>
       </div>
       <LazyMiscPortfolio/>
     </div>
@@ -139,38 +249,22 @@ h2 {
 }
 
 img {
+  height: 15rem;
+  object-fit: cover;
+  float: left;
   border-radius: 0.5rem;
+  margin-right: 0.5rem;
 }
 
-.left-image {
-  float: left;
-  margin-right: 0.5rem;
-  height: 101%;
-  display: flex;
-  align-items: flex-end;
-  shape-outside: inset(calc(100% - 15rem) 0 0);
-}
 
 .wide {
-  shape-outside: inset(calc(100% - 13rem) 0 0);
-}
-
-.wide img {
   height: 13rem !important;
 }
 
-.square img {
+.square {
   aspect-ratio: 4 / 3;
   object-fit: cover;
   height: 14rem !important;
-}
-
-.square {
-  shape-outside: inset(calc(100% - 14rem) 0 0);
-}
-
-.left-image img {
-  height: 15rem;
 }
 
 .section {
@@ -187,28 +281,16 @@ img {
   }
 
   .wide {
-    shape-outside: inset(calc(100% - 9rem) 0 0) !important;
-  }
-
-  .wide img {
     height: 9rem !important;
   }
 
-  .square img {
+  .square {
     aspect-ratio: 4 / 3;
     object-fit: cover;
     height: 11rem !important;
   }
 
-  .square {
-    shape-outside: inset(calc(100% - 11rem) 0 0) !important;
-  }
-
   .left-image {
-    shape-outside: inset(calc(100% - 12rem) 0 0);
-  }
-
-  .left-image img {
     height: 12rem;
   }
 }

@@ -56,9 +56,12 @@ p, a {
   left: 0;
   width: 100vw;
   height: max-content;
-  background-color: rgba(0, 0, 0, 0.25);
+  background-color: rgba(0, 0, 0, 0.6);
   transform: translateY(calc(-100% + 4rem));
   transition: transform 0.3s ease-in-out;
+
+
+  backdrop-filter: blur(0.1rem);
   z-index: 5;
 }
 
@@ -92,7 +95,7 @@ p, a {
   margin-block: 0 !important;
   padding-block: 0.5rem;
   padding-inline: 2rem;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .bottom p {
