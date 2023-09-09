@@ -5,7 +5,7 @@ useHeadSafe({
   meta: [
     {
       name: "description",
-      content: "Sammy Aknan's portfolio website.",
+      content: "Sammy Aknan's portfolio.",
     },
   ],
 })
@@ -13,14 +13,34 @@ useHeadSafe({
 </script>
 
 <template>
-  <PortfolioPreview/>
-  <div class="spacer" />
-  <Roadmap/>
+  <ul>
+    <li id="portfolio">
+      <LazyPortfolio/>
+    </li>
+    <li id="roadmap">
+      <LazyRoadmap/>
+    </li>
+    <li id="about">
+      <LazyAbout/>
+    </li>
+    <li id="services">
+      <LazyServices/>
+    </li>
+    <li id="contact">
+      <LazyContact/>
+    </li>
+  </ul>
 </template>
 
 <style scoped>
-.spacer {
-  height: 3rem;
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  padding-block: 5rem;
 }
 
 </style>

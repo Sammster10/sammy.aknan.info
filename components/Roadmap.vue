@@ -20,18 +20,13 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="desktop-only">
+  <div class="relative">
     <RectangularCard class="inline-margin-auto">
       <h1 class="txt-center margin-0 letter-spacing-negative-05">How I Got Here (Roadmap)</h1>
     </RectangularCard>
+    <div class="mobile-only" id="top-line" />
   </div>
-  <div class="mobile-only relative">
-    <RectangularCard class="inline-margin-auto">
-      <h3 class="txt-center margin-0 letter-spacing-negative-05">How I Got Here (Roadmap)</h3>
-    </RectangularCard>
-    <div id="top-line" />
-  </div>
-  <div class="relative">
+  <div class="relative top-pad-3">
     <div v-if="isMobile(windowWidth)" class="mobile-only">
       <div id="vertical-line" class="left"/>
       <!-- spacer -->
@@ -93,15 +88,38 @@ onMounted(() => {
   z-index: -1;
 }
 
+@media (max-width: 768px) {
+  #vertical-line {
+    top: 8rem;
+  }
+
+  #top-line:after {
+    content: "";
+    position: absolute;
+
+    top: 7rem;
+    left: -2.5rem;
+    width: 4rem;
+    height: 5rem;
+
+    border-radius: 1rem 0 0 0;
+    border-width: 0.5rem 0 0 0.5rem;
+    border-style: solid;
+    border-color: var(--line-color);
+  }
+}
+
 #top-line {
   position: absolute;
   top: 50%;
-  left: 1rem;
+  left: 50%;
 
-  width: 7rem;
-  height: 2.5rem;
-  border-radius: 1rem 0 0 0;
-  border-width: 0.5rem 0 0 0.5rem;
+  transform: translate(-100%);
+
+  width: calc(50% - 4rem);
+  height: 7rem;
+  border-radius: 0 0 1rem 0;
+  border-width: 0 0.5rem 0.5rem 0;
   border-style: solid;
   border-color: var(--line-color);
 

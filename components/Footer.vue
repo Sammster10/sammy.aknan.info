@@ -2,7 +2,6 @@
 import config from "~/assets/config/config.json";
 import YouTubeSVG from "~/components/YouTubeSVG.vue";
 import DiscordSVG from "~/components/DiscordSVG.vue";
-import Instagram from "~/pages/instagram.vue";
 import InstagramSVG from "~/components/InstagramSVG.vue";
 import LinkedInSVG from "~/components/LinkedInSVG.vue";
 import GitHubSVG from "~/components/GitHubSVG.vue";
@@ -28,7 +27,7 @@ import GitHubSVG from "~/components/GitHubSVG.vue";
       </a>
     </div>
     <div class="links">
-      <router-link to="/contact">Contact</router-link>
+      <router-link to="/#contact">Contact</router-link>
       • <a :href="config.source_link">View Source Code</a>
     </div>
     <div class="last-updated">

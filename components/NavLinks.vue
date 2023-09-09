@@ -4,7 +4,7 @@
 
 <template>
   <div class="links">
-    <router-link to="/portfolio" class="no-decoration">
+    <router-link to="/#portfolio" class="no-decoration">
       <div id="portfolio-link" class="link hover-scale">
         Portfolio
         <hr>
@@ -17,19 +17,19 @@
           <hr>
         </div>
       </router-link>
-      <router-link to="/about" class="no-decoration">
+      <router-link to="/#about" class="no-decoration">
         <div id="about-link" class="link hover-scale">
           About
           <hr>
         </div>
       </router-link>
-      <router-link to="/services" class="no-decoration">
+      <router-link to="/#services" class="no-decoration">
         <div id="services-link" class="link hover-scale">
           Services
           <hr>
         </div>
       </router-link>
-      <router-link to="/contact" class="no-decoration">
+      <router-link to="/#contact" class="no-decoration">
         <div id="contact-link" class="link hover-scale">
           Contact
           <hr>

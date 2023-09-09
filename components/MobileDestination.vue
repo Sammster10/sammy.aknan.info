@@ -39,8 +39,9 @@ defineProps({
   content: "";
   position: absolute;
   width: 5rem;
-  height: 10rem;
+  height: 5rem;
   left: 1rem;
+  top: 5rem;
 
   border-color: var(--line-color);
   border-radius: 0 0 0 2rem;

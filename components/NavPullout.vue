@@ -22,9 +22,9 @@ let oldActiveLink = "";
 const router = useRouter();
 
 onMounted(() => {
-  oldActiveLink = updateActiveLink("nav-pullout", router.currentRoute.value.path, oldActiveLink);
-  watch(() => router.currentRoute.value.path, () => {
-    oldActiveLink = updateActiveLink("nav-pullout", router.currentRoute.value.path, oldActiveLink);
+  oldActiveLink = updateActiveLink("nav-pullout", router.currentRoute.value.fullPath, oldActiveLink);
+  watch(() => router.currentRoute.value.fullPath, () => {
+    oldActiveLink = updateActiveLink("nav-pullout", router.currentRoute.value.fullPath, oldActiveLink);
   })
 })
 

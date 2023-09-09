@@ -1,18 +1,30 @@
-export function updateActiveLink(parentId: string, path: string, oldActiveLink: string) {
+export function updateActiveLink(parentId: string, fullPath: string, oldActiveLink: string) {
+    let elementId = "";
+    if (fullPath.includes("#")) {
+        elementId = fullPath.split("#")[1];
+    }
     const query = `#${parentId} ${oldActiveLink ? "#" : ""}${oldActiveLink}`;
     document.querySelector(query)?.classList.remove("active");
-    let activeLink = "";
+    let activeLink;
 
-    if (path === "/" || path === "") {
-        activeLink = "home-link";
-    } else if (path.startsWith("/about")) {
+    if (elementId === "about") {
         activeLink = "about-link";
-    } else if (path.startsWith("/services")) {
+        document.title = "Sammy | About";
+    } else if (elementId === "services") {
         activeLink = "services-link";
-    } else if (path.startsWith("/contact")) {
+        document.title = "Sammy | Services";
+    } else if (elementId === "contact") {
         activeLink = "contact-link";
-    } else if (path.startsWith("/portfolio")) {
+        document.title = "Sammy | Contact";
+    } else if (elementId === "portfolio") {
         activeLink = "portfolio-link";
+        document.title = "Sammy | Portfolio";
+    } else if (elementId === "roadmap") {
+        activeLink = "home-link";
+        document.title = "Sammy | Roadmap";
+    } else {
+        activeLink = "home-link";
+        document.title = "Sammy | Home";
     }
 
     if (!activeLink) {

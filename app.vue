@@ -2,6 +2,8 @@
 import Header from "~/components/Header.vue";
 import Footer from "~/components/Footer.vue";
 
+const router = useRouter();
+
 /* TODO:
     Some of the content in the portfolio page should link back to individual pages detailing the content. eg servers
  */
@@ -108,15 +110,31 @@ function addShowClassOnScroll() {
   });
 }
 
+function scrollToElement() {
+  if (router.currentRoute.value.path === '/' && router.currentRoute.value.fullPath.includes("#")) {
+    const id = router.currentRoute.value.fullPath.split("#")[1];
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView();
+    }
+  }
+}
+
 onMounted(() => {
   slowScroll();
   fastScroll();
   getElementsToFade();
   fadeElements();
+  scrollToElement();
 
 
   window.addEventListener('scroll', addShowClassOnScroll);
   window.addEventListener('resize', addShowClassOnScroll);
+
+  watch(() => router.currentRoute.value, () => {
+    scrollToElement();
+  });
+
   // Call the function on page load in case some elements are initially in the viewport.
   addShowClassOnScroll();
 })

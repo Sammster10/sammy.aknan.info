@@ -1,10 +1,10 @@
 <script setup lang="ts">
 useHeadSafe({
-  title: "Sammy | Portfolio",
+  title: "Sammy | Roadmap",
   meta: [
     {
       name: "description",
-      content: "Sammy Aknan's portfolio.",
+      content: "Information about Sammy Aknan's history.",
     },
   ],
 })
@@ -12,7 +12,7 @@ useHeadSafe({
 const router = useRouter();
 
 onBeforeMount(() => {
-  router.push("/#portfolio")
+  router.push("/#roadmap")
 })
 </script>
 

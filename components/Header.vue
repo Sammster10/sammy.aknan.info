@@ -73,9 +73,9 @@ onMounted(() => {
   }, 50);
 
 
-  oldActiveLink = updateActiveLink("nav-container", router.currentRoute.value.path, oldActiveLink);
-  watch(() => router.currentRoute.value.path, (newPath) => {
-    oldActiveLink = updateActiveLink("nav-container", router.currentRoute.value.path, oldActiveLink);
+  oldActiveLink = updateActiveLink("nav-container", router.currentRoute.value.fullPath, oldActiveLink);
+  watch(() => router.currentRoute.value.fullPath, (newPath) => {
+    oldActiveLink = updateActiveLink("nav-container", router.currentRoute.value.fullPath, oldActiveLink);
   })
 })
 
