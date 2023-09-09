@@ -23,7 +23,7 @@
           each one of these servers was better than the last.
         </p>
       </div>
-      <LazyServersPorfolio/>
+      <ServersPorfolio/>
     </div>
 
     <hr>
@@ -43,7 +43,7 @@
           act as a great resource to view my progress over time.
         </p>
       </div>
-      <LazyYouTubePorfolio/>
+      <YouTubePorfolio/>
     </div>
 
     <hr>
@@ -64,7 +64,7 @@
           closely with my clients so that I can properly capture their vision rather than
           creating my own.</p>
       </div>
-      <LazyWebDevPortfolio/>
+      <WebDevPortfolio/>
     </div>
 
     <hr>
@@ -87,7 +87,7 @@
           I programmed these game-modes rather than drawing
           sprites for them.</p>
       </div>
-      <LazyMarketPlacePortfolio/>
+      <MarketPlacePortfolio/>
     </div>
 
     <hr>
@@ -106,7 +106,7 @@
           this collection of projects that I think are worth taking a look at.
         </p>
       </div>
-      <LazyMiscPortfolio/>
+      <MiscPortfolio/>
     </div>
 
     <hr>

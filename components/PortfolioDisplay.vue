@@ -39,7 +39,7 @@
 
 :deep(.description) {
   text-align: center;
-  width: 100%;
+  width: calc(100% - 9rem);
 }
 
 :deep(h3) {
@@ -82,6 +82,10 @@
 
   :deep(h3) {
     font-size: 1rem;
+  }
+
+  :deep(.description) {
+    width: 100%
   }
 
   :deep(img) {
