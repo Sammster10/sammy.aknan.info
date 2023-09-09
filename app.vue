@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Header from "~/components/Header.vue";
 import Footer from "~/components/Footer.vue";
+import {scrollToElement} from "~/util/utils";
 
 const router = useRouter();
 
@@ -110,30 +111,21 @@ function addShowClassOnScroll() {
   });
 }
 
-function scrollToElement() {
-  if (router.currentRoute.value.path === '/' && router.currentRoute.value.fullPath.includes("#")) {
-    const id = router.currentRoute.value.fullPath.split("#")[1];
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView();
-    }
-  }
-}
 
 onMounted(() => {
   slowScroll();
   fastScroll();
   getElementsToFade();
   fadeElements();
-  scrollToElement();
+
+  if (router.currentRoute.value.fullPath.startsWith('/') && router.currentRoute.value.fullPath.includes("#")) {
+    const id = router.currentRoute.value.fullPath.split("#")[1];
+    scrollToElement(id);
+  }
 
 
   window.addEventListener('scroll', addShowClassOnScroll);
   window.addEventListener('resize', addShowClassOnScroll);
-
-  watch(() => router.currentRoute.value, () => {
-    scrollToElement();
-  });
 
   // Call the function on page load in case some elements are initially in the viewport.
   addShowClassOnScroll();

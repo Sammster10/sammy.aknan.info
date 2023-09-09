@@ -55,3 +55,10 @@ export function isLightTheme() {
 export function isDarkTheme() {
     return getTheme() === "dark";
 }
+
+export function scrollToElement(id: string) {
+    const element = document.getElementById(id);
+    if (element) {
+        element.scrollIntoView();
+    }
+}

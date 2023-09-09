@@ -1,40 +1,51 @@
 <script setup lang="ts">
 
+import {scrollToElement} from "~/util/utils";
+
+const router = useRouter();
+
+function changeLink(id: string) {
+  if (id === "") {
+    router.push("");
+  } else router.push(`#${id}`);
+
+  scrollToElement(id);
+}
 </script>
 
 <template>
   <div class="links">
-    <router-link to="/#portfolio" class="no-decoration">
+    <div class="pointer no-select" @click="changeLink('portfolio')">
       <div id="portfolio-link" class="link hover-scale">
         Portfolio
         <hr>
       </div>
-    </router-link>
+    </div>
     <div class="links-right">
-      <router-link to="/" class="no-decoration">
+      <div class="pointer no-select" @click="changeLink('')">
         <div id="home-link" class="link hover-scale">
           Home
           <hr>
         </div>
-      </router-link>
-      <router-link to="/#about" class="no-decoration">
+      </div>
+      <div class="pointer no-select" @click="changeLink('about')">
         <div id="about-link" class="link hover-scale">
           About
           <hr>
         </div>
-      </router-link>
-      <router-link to="/#services" class="no-decoration">
+      </div>
+      <div class="pointer no-select" @click="changeLink('services')">
         <div id="services-link" class="link hover-scale">
           Services
           <hr>
         </div>
-      </router-link>
-      <router-link to="/#contact" class="no-decoration">
+      </div>
+      <div class="pointer no-select" @click="changeLink('contact')">
         <div id="contact-link" class="link hover-scale">
           Contact
           <hr>
         </div>
-      </router-link>
+      </div>
 
     </div>
   </div>
@@ -42,9 +53,14 @@
 
 <style scoped>
 
+.links {
+  color: white;
+}
+
 a {
   color: white;
 }
+
 hr {
   margin-top: 0;
   border: 0 solid white;

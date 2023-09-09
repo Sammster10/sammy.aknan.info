@@ -650,3 +650,11 @@ body {
     visibility: visible;
     opacity: 1;
 }
+
+.pointer {
+    cursor: pointer;
+}
+
+.no-select {
+    user-select: none;
+}
