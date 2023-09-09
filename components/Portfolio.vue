@@ -15,6 +15,7 @@
         <p>
           <span class="left-image square">
             <img src="https://cdn.mos.cms.futurecdn.net/qjjeZPZT4MmqUgJHYFfwJF.jpg"
+                 loading="lazy"
                  alt="minecraft realms image">
           </span>
           By far, my history with Minecraft servers has had an enormous impact on where I am today. Over the course of
@@ -34,6 +35,7 @@
         <p>
           <span class="left-image wide">
             <img src="/portfolio/yt_perplayer.jpg"
+                 loading="lazy"
                  alt="youtube thumbnail of minecraft tutorial video: how to make custom commands">
           </span>
           Over the years, I've created a catalog of tutorial-style YouTube videos in which I would teach people a
@@ -54,6 +56,7 @@
         <p>
           <span class="left-image square">
             <img src="/portfolio/web-dev.png"
+                 loading="lazy"
                  alt="people constructing a web page">
           </span>
           Web-development always seemed impossible to me - I suck at graphic design, but I loved the idea of creating
@@ -74,6 +77,7 @@
         <p>
           <span class="left-image">
             <img src="https://www.minecraft.net/content/dam/games/minecraft/marketplace/mediablock1.png"
+                 loading="lazy"
                  alt="minecraft marketplace image">
           </span>
           The Minecraft Marketplace is a service that both individuals and large organizations can apply for in order
@@ -98,6 +102,7 @@
         <p>
           <span class="left-image square">
             <img src="https://wallpaperaccess.com/full/3710385.jpg"
+                 loading="lazy"
                  alt="gears">
           </span>
           As a developer, I have lots of side projects. Most of which aren't worth mentioning, but rather than

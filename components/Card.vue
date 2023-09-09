@@ -20,7 +20,7 @@ defineProps({
       <slot></slot>
     </div>
     <div class="card-image">
-      <img v-if="img" :src="img" alt="...">
+      <img v-if="img" loading="lazy" :src="img" alt="...">
     </div>
   </div>
 </template>

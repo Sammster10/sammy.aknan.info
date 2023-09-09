@@ -31,11 +31,11 @@ onBeforeMount(() => {
 </script>
 
 <template>
-  <img class="expandable-image" :src="src" @click="setSelectedImage(src)" v-if="!isImageSelected()" alt="" />
+  <img class="expandable-image" loading="lazy" :src="src" @click="setSelectedImage(src)" v-if="!isImageSelected()" alt="" />
 
   <div class="image-overlay" v-if="isImageSelected()" @click="clearSelectedImage()">
     <div class="image-container">
-      <img :src="selectedImage" alt=""/>
+      <img :src="selectedImage" loading="lazy" alt=""/>
     </div>
   </div>
 </template>

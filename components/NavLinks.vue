@@ -7,9 +7,12 @@ const router = useRouter();
 function changeLink(id: string) {
   if (id === "") {
     router.push("");
-  } else router.push(`#${id}`);
+    window.scrollTo(0, 0);
+  } else {
+    router.push(`#${id}`);
+    scrollToElement(id);
+  }
 
-  scrollToElement(id);
 }
 </script>
 

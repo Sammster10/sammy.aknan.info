@@ -15,19 +15,19 @@ useHeadSafe({
 <template>
   <ul>
     <li id="portfolio">
-      <LazyPortfolio/>
+      <Portfolio/>
     </li>
     <li id="roadmap">
-      <LazyRoadmap/>
+      <Roadmap/>
     </li>
     <li id="about">
-      <LazyAbout/>
+      <About/>
     </li>
     <li id="services">
-      <LazyServices/>
+      <Services/>
     </li>
     <li id="contact">
-      <LazyContact/>
+      <Contact/>
     </li>
   </ul>
 </template>
