@@ -144,7 +144,6 @@
           programming concept, or simply show them how to complete a task. As I continued learning and my skill set
           evolved, I tried to reflect that in my YouTube videos and teach my audience more complex topics. While I
           don't make as many YouTube videos anymore, all
-
           <img class="wide" src="/portfolio/yt_perplayer.jpg"
                loading="lazy"
                alt="minecraft realms image">
@@ -210,7 +209,6 @@
       <div class="intro">
         <p>
           As a developer, I have lots of side projects. Most of which aren't worth mentioning, but rather than
-
           <img class="square" src="https://wallpaperaccess.com/full/3710385.jpg"
                loading="lazy"
                alt="gears">
@@ -288,10 +286,6 @@ img {
     aspect-ratio: 4 / 3;
     object-fit: cover;
     height: 11rem !important;
-  }
-
-  .left-image {
-    height: 12rem;
   }
 }
 

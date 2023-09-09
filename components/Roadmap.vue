@@ -91,6 +91,7 @@ onMounted(() => {
 @media (max-width: 768px) {
   #vertical-line {
     top: 8rem;
+    height: calc(100% - 20rem);
   }
 
   #top-line:after {
